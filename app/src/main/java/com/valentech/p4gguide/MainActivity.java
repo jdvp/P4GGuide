@@ -2,9 +2,6 @@ package com.valentech.p4gguide;
 
 import android.app.FragmentManager;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -13,6 +10,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.valentech.p4gguide.fragment.HomeFragment;
+import com.valentech.p4gguide.fragment.SocialLinkFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -85,11 +85,13 @@ public class MainActivity extends AppCompatActivity
         FragmentManager fragmentManager = getFragmentManager();
         switch (id) {
             case R.id.nav_social_links:
-                fragmentManager.beginTransaction().replace(R.id.content_frame, new SocialLinkFragment()).commit();
+                fragmentManager.beginTransaction().replace(R.id.content_frame, new SocialLinkFragment()).
+                        addToBackStack("social links").commit();
                 break;
             case R.id.nav_home:
             default:
-                fragmentManager.beginTransaction().replace(R.id.content_frame, new HomeFragment()).commit();
+                fragmentManager.beginTransaction().replace(R.id.content_frame, new HomeFragment()).
+                        addToBackStack("home").commit();
                 break;
         }
     }

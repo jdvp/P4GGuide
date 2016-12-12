@@ -1,0 +1,46 @@
+{
+	"availability" : {
+		"monday"     : true,
+		"tuesday"    : false,
+		"wednesday"  : false,
+		"thursday"   : true,
+		"friday"     : true,
+		"saturday"   : true,
+		"sunday"     : true,
+		"rain"       : false,
+		"activation" : "Automatic on April 16th",
+		"last"   : "November 27",
+		"location"   : {
+			"weekdays" : "Classroom Building 2F",
+			"sundays"  : "Junes",
+			"holidays" : "Junes"
+		}
+	},
+	
+	"rank" : [
+		{
+			"level" : 1,
+			"points" : 0,
+			"skill" : "Trafuri",
+			"choices" : [{
+				"dialogue" : "Yosuke: Sorry about that. You know me, i'm infamous around here.",
+				"options" : [
+					{
+						"response" : "It must be tough.",
+						"with"     : 3,
+						"without"  : 3
+					}, {
+						"response" : "You're bragging about it?",
+						"with"     : 0,
+						"without"  : 0
+					}, {
+						"response" : "Why are you infamous?",
+						"with"     : 0,
+						"without"  : 0
+					}
+				]
+			}
+			]
+		}
+	]
+}

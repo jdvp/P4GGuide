@@ -1,6 +1,7 @@
-package com.valentech.p4gguide;
+package com.valentech.p4gguide.fragment;
 
 import android.app.Fragment;
+import android.app.FragmentManager;
 import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -13,11 +14,14 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import com.valentech.p4gguide.R;
+import com.valentech.p4gguide.util.StringUtil;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
+import static com.valentech.p4gguide.util.StringUtil.getSocialLinkImgId;
 
 /**
  * Created by JD on 12/11/2016.
@@ -51,17 +55,29 @@ public class SocialLinkFragment extends Fragment {
         }
 
         @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
+        public View getView(final int position, View convertView, ViewGroup parent) {
             convertView = inflater.inflate(R.layout.social_link_item, null);
             final String item = getItem(position);
             ImageView image = (ImageView) convertView.findViewById(R.id.social_link_item_image);
-            int imgSourceID = getResources().getIdentifier("social_link_" + sanitizeItemName(item), "drawable", getActivity().getPackageName());
 
-            image.setImageDrawable(getResources().getDrawable(imgSourceID));
+            image.setImageDrawable(getResources().getDrawable(getSocialLinkImgId(getActivity(), item)));
             TextView itemName = (TextView) convertView.findViewById(R.id.social_link_item_name);
             itemName.setText(item);
 
             convertView.setLayoutParams(new GridView.LayoutParams(getWidth(), getHeight()));
+            convertView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Bundle args = new Bundle();
+                    args.putSerializable("link", getItem(position));
+                    IndividualSocialLinkFragment newFragment = new IndividualSocialLinkFragment();
+                    newFragment.setArguments(args);
+
+                    FragmentManager fragmentManager = getFragmentManager();
+                    fragmentManager.beginTransaction().replace(R.id.content_frame, newFragment).
+                            addToBackStack("social link individual").commit();
+                }
+            });
             return convertView;
         }
 
@@ -71,10 +87,6 @@ public class SocialLinkFragment extends Fragment {
 
         private int getHeight() {
             return Double.valueOf(getWidth() * 1.15).intValue();
-        }
-
-        private String sanitizeItemName(String item) {
-            return item.replaceAll("[^a-zA-Z]", "").toLowerCase().trim();
         }
     }
 }
