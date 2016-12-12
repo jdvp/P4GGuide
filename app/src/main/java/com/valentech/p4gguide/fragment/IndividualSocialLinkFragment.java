@@ -15,12 +15,12 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.valentech.p4gguide.R;
 import com.valentech.p4gguide.model.social_link.SocialLink;
-import com.valentech.p4gguide.util.StringUtil;
+import com.valentech.p4gguide.util.ResourceUtility;
 
 import java.io.InputStream;
 import java.lang.reflect.Type;
 
-import static com.valentech.p4gguide.util.StringUtil.getSocialLinkImgId;
+import static com.valentech.p4gguide.util.ResourceUtility.getSocialLinkImgId;
 
 /**
  * Created by JD on 12/11/2016.
@@ -43,7 +43,7 @@ public class IndividualSocialLinkFragment extends Fragment {
         Type type = new TypeToken<SocialLink>(){}.getType();
         try {
             Resources res = getResources();
-            InputStream in_s = res.openRawResource(StringUtil.getRawId(getActivity(), name));
+            InputStream in_s = res.openRawResource(ResourceUtility.getRawId(getActivity(), name));
 
             byte[] b = new byte[in_s.available()];
             int read = in_s.read(b);

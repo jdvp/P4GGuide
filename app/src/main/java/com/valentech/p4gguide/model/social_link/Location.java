@@ -7,7 +7,6 @@ package com.valentech.p4gguide.model.social_link;
 public class Location {
     private String weekdays;
     private String sundays;
-    private String holidays;
 
     public String getWeekdays() {
         return weekdays;
@@ -23,13 +22,5 @@ public class Location {
 
     public void setSundays(String sundays) {
         this.sundays = sundays;
-    }
-
-    public String getHolidays() {
-        return holidays;
-    }
-
-    public void setHolidays(String holidays) {
-        this.holidays = holidays;
     }
 }

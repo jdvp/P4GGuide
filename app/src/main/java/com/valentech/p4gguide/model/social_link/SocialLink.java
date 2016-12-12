@@ -9,6 +9,15 @@ import java.util.ArrayList;
 public class SocialLink {
     private Availability availability;
     private ArrayList<Rank> rank;
+    private String notes;
+
+    public String getNotes() {
+        return notes;
+    }
+
+    public void setNotes(String notes) {
+        this.notes = notes;
+    }
 
     public Availability getAvailability() {
         return availability;

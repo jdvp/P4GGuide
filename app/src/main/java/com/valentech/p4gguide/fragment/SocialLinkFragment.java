@@ -6,22 +6,24 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.valentech.p4gguide.R;
-import com.valentech.p4gguide.util.StringUtil;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.valentech.p4gguide.util.StringUtil.getSocialLinkImgId;
+import static com.valentech.p4gguide.util.ResourceUtility.getPixelsFromDP;
+import static com.valentech.p4gguide.util.ResourceUtility.getSocialLinkImgId;
 
 /**
  * Created by JD on 12/11/2016.
@@ -64,7 +66,16 @@ public class SocialLinkFragment extends Fragment {
             TextView itemName = (TextView) convertView.findViewById(R.id.social_link_item_name);
             itemName.setText(item);
 
-            convertView.setLayoutParams(new GridView.LayoutParams(getWidth(), getHeight()));
+            if(position < 3) {
+                View card = convertView.findViewById(R.id.social_link_card);
+                if(card != null && card.getLayoutParams() instanceof LinearLayout.LayoutParams) {
+                    LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) card.getLayoutParams();
+                    params.setMargins(0, getPixelsFromDP(16), 0, 0 );
+                    card.setLayoutParams(params);
+                }
+            }
+
+            convertView.setLayoutParams(new GridView.LayoutParams(getWidth(), GridView.AUTO_FIT));
             convertView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -82,11 +93,9 @@ public class SocialLinkFragment extends Fragment {
         }
 
         private int getWidth() {
-            return Resources.getSystem().getDisplayMetrics().widthPixels / 3;
-        }
-
-        private int getHeight() {
-            return Double.valueOf(getWidth() * 1.15).intValue();
+            int sideMargins = getPixelsFromDP(16) * 2;
+            int gridSpacing = getPixelsFromDP(8) * 2;
+            return (Resources.getSystem().getDisplayMetrics().widthPixels - (sideMargins + gridSpacing))/ 3;
         }
     }
 }

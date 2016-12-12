@@ -7,7 +7,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:numColumns="3"
-        android:horizontalSpacing="16dp"
-        android:verticalSpacing="16dp"/>
+        android:horizontalSpacing="8dp"
+        android:verticalSpacing="16dp"
+        android:padding="16dp"
+        android:clipToPadding="false"/>
 
 </RelativeLayout>

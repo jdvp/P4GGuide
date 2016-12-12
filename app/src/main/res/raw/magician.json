@@ -12,8 +12,7 @@
 		"last"   : "November 27",
 		"location"   : {
 			"weekdays" : "Classroom Building 2F",
-			"sundays"  : "Junes",
-			"holidays" : "Junes"
+			"sundays"  : "Junes"
 		}
 	},
 	
@@ -41,6 +40,8 @@
 				]
 			}
 			]
-		}
+		}, {
+
+      }
 	]
 }
