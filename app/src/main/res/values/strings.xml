@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">P4G Guide</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+
+    <string-array name="social_link_name_list">
+        <item>Fool</item>
+        <item>Magician</item>
+        <item>Chariot</item>
+        <item>Priestess</item>
+        <item>Emperor</item>
+        <item>Star</item>
+        <item>Lovers</item>
+        <item>Fortune</item>
+        <item>Strength</item>
+        <item>Sun</item>
+        <item>Hanged Man</item>
+        <item>Moon</item>
+        <item>Justice</item>
+        <item>Hierophant</item>
+        <item>Jester/Hunger</item>
+        <item>Hermit</item>
+        <item>Death</item>
+        <item>Temperance</item>
+        <item>Devil</item>
+        <item>Tower</item>
+        <item>Empress</item>
+        <item>Aeon</item>
+        <item>Judgement</item>
+    </string-array>
+</resources>
