@@ -20,28 +20,29 @@
 		{
 			"level" : 1,
 			"points" : 0,
-			"skill" : "Trafuri",
+			"results" : "Learns Trafuri",
 			"choices" : [{
 				"dialogue" : "Yosuke: Sorry about that. You know me, I'm infamous around here.",
 				"options" : [
 					{
 						"response" : "It must be tough.",
-						"with"     : 3,
-						"without"  : 3
+						"with"     : "3",
+						"without"  : "3"
 					}, {
 						"response" : "You're bragging about it?",
-						"with"     : 0,
-						"without"  : 0
+						"with"     : "-",
+						"without"  : "-"
 					}, {
 						"response" : "Why are you infamous?",
-						"with"     : 0,
-						"without"  : 0
+						"with"     : "-",
+						"without"  : "-"
 					}
 				]
 			}
 			]
-		}, {
-
-      }
+		} , {
+        "level" : 2,
+        "points" : 2
+       }
 	]
 }

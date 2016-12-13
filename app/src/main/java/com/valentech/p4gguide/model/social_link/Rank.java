@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class Rank {
     private int level;
     private int points;
-    private String skill;
+    private String results;
     private ArrayList<Choice> choices;
 
     public int getLevel() {
@@ -28,12 +28,12 @@ public class Rank {
         this.points = points;
     }
 
-    public String getSkill() {
-        return skill;
+    public String getResults() {
+        return results;
     }
 
-    public void setSkill(String skill) {
-        this.skill = skill;
+    public void setResults(String results) {
+        this.results = results;
     }
 
     public ArrayList<Choice> getChoices() {

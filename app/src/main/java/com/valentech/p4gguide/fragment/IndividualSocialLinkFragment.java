@@ -19,7 +19,10 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.valentech.p4gguide.R;
 import com.valentech.p4gguide.model.social_link.Availability;
+import com.valentech.p4gguide.model.social_link.Choice;
 import com.valentech.p4gguide.model.social_link.Location;
+import com.valentech.p4gguide.model.social_link.Option;
+import com.valentech.p4gguide.model.social_link.Rank;
 import com.valentech.p4gguide.model.social_link.SocialLink;
 import com.valentech.p4gguide.util.ResourceUtility;
 
@@ -29,9 +32,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.zip.GZIPInputStream;
 
-import static com.valentech.p4gguide.util.ResourceUtility.getPixelsFromDP;
 import static com.valentech.p4gguide.util.ResourceUtility.getSocialLinkImgId;
 
 /**
@@ -64,14 +65,64 @@ public class IndividualSocialLinkFragment extends Fragment {
             }
 
             SocialLink socialLink = gson.fromJson(new String(b), type);
-            displayLinkInformation(socialLink, layout, inflater);
+            createHeaderCard(socialLink, layout, inflater);
+            createRankCards(socialLink, layout, inflater);
         } catch (Exception e) {
             //set layout to failed to load
         }
         return myView;
     }
 
-    private void displayLinkInformation(SocialLink socialLink, LinearLayout layout, LayoutInflater inflater) {
+    private void createRankCards(SocialLink socialLink, LinearLayout layout, LayoutInflater inflater) {
+        for(Rank rank : socialLink.getRank()) {
+            View view = inflater.inflate(R.layout.social_link_rank_card, layout, false);
+
+            //set title
+            TextView title = (TextView) view.findViewById(R.id.rank_card_title);
+            title.setText(String.format(getString(R.string.social_link_ranking), rank.getLevel(), rank.getLevel() + 1));
+
+            //set points needed
+            TextView points = (TextView) view.findViewById(R.id.rank_card_points);
+            points.setText(String.format(getString(R.string.social_link_points), rank.getPoints()));
+
+            //set choices
+            LinearLayout choiceLayout = (LinearLayout) view.findViewById(R.id.choice_list);
+            for(Choice choice : rank.getChoices()) {
+                View choiceView = inflater.inflate(R.layout.choice_item, layout, false);
+
+                TextView dialogue = (TextView) choiceView.findViewById(R.id.dialogue);
+                dialogue.setText(choice.getDialogue());
+
+                ArrayList<String> optionArray = new ArrayList<>();
+                optionArray.add("");
+                optionArray.add("W");
+                optionArray.add("W/O");
+
+                ArrayList<Option> options = choice.getOptions();
+                for(int i = 0; i < options.size(); i++) {
+                    optionArray.add((i + 1) + ". " + options.get(i).getResponse());
+                    optionArray.add(options.get(i).getWith());
+                    optionArray.add(options.get(i).getWithout());
+                }
+
+                GridView choiceGrid = (GridView) choiceView.findViewById(R.id.choice_grid);
+                choiceGrid.setAdapter(new GenericGridTextAdapter(getActivity(), R.layout.generic_grid_item, optionArray, true));
+                choiceLayout.addView(choiceView);
+            }
+
+            //set results
+            TextView results = (TextView) view.findViewById(R.id.social_link_results);
+            if(rank.getResults() != null) {
+                results.setText(rank.getResults());
+            } else {
+                view.findViewById(R.id.social_link_results_heading).setVisibility(View.GONE);
+                results.setVisibility(View.GONE);
+            }
+            layout.addView(view);
+        }
+    }
+
+    private void createHeaderCard(SocialLink socialLink, LinearLayout layout, LayoutInflater inflater) {
         View view = inflater.inflate(R.layout.social_link_header_card, layout, false);
 
         //set title and image
@@ -85,7 +136,7 @@ public class IndividualSocialLinkFragment extends Fragment {
         GridView locationGrid = (GridView) view.findViewById(R.id.location_grid);
         if(socialLink.getAvailability() != null) {
             calendarGrid.setAdapter(new CalendarAdapter(getActivity(), R.layout.generic_grid_item, getCalendarItems(socialLink)));
-            locationGrid.setAdapter(new LocationAdapter(getActivity(), R.layout.generic_grid_item, getLocationItems(socialLink.getAvailability().getLocation())));
+            locationGrid.setAdapter(new GenericGridTextAdapter(getActivity(), R.layout.generic_grid_item, getLocationItems(socialLink.getAvailability().getLocation())));
         } else {
             calendarGrid.setVisibility(View.GONE);
             locationGrid.setVisibility(View.GONE);
@@ -191,13 +242,20 @@ public class IndividualSocialLinkFragment extends Fragment {
         return locationItems;
     }
 
-    private class LocationAdapter extends ArrayAdapter<String> {
+    private class GenericGridTextAdapter extends ArrayAdapter<String> {
 
         private LayoutInflater inflater;
+        private boolean isTwoLines = false;
 
-        LocationAdapter(Context context, int resource, ArrayList<String> socialLinkItems) {
+        GenericGridTextAdapter(Context context, int resource, ArrayList<String> socialLinkItems) {
             super(context, resource, socialLinkItems);
             inflater = LayoutInflater.from(context);
+        }
+
+        GenericGridTextAdapter(Context context, int resource, ArrayList<String> socialLinkItems, boolean isTwoLines) {
+            super(context, resource, socialLinkItems);
+            inflater = LayoutInflater.from(context);
+            this.isTwoLines = isTwoLines;
         }
 
         @Override
@@ -209,7 +267,12 @@ public class IndividualSocialLinkFragment extends Fragment {
             if(item != null) {
                 TextView textView = new TextView(getActivity());
                 textView.setText(item);
+                textView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
                 container.addView(textView);
+
+                if(isTwoLines) {
+                    textView.setLines(2);
+                }
             }
 
             return convertView;

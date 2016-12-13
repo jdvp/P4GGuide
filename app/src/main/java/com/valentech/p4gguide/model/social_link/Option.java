@@ -6,8 +6,8 @@ package com.valentech.p4gguide.model.social_link;
 
 public class Option {
     private String response;
-    private int with;
-    private int without;
+    private String with;
+    private String without;
 
     public String getResponse() {
         return response;
@@ -17,19 +17,19 @@ public class Option {
         this.response = response;
     }
 
-    public int getWith() {
+    public String getWith() {
         return with;
     }
 
-    public void setWith(int with) {
+    public void setWith(String with) {
         this.with = with;
     }
 
-    public int getWithout() {
+    public String getWithout() {
         return without;
     }
 
-    public void setWithout(int without) {
+    public void setWithout(String without) {
         this.without = without;
     }
 }

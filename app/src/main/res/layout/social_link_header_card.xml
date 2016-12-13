@@ -35,7 +35,7 @@
             android:layout_gravity="center_horizontal"
             android:gravity="center_horizontal"/>
 
-        <GridView
+        <com.valentech.p4gguide.view.ScrollGridView
             android:id="@+id/calendar_grid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -49,7 +49,7 @@
             android:layout_gravity="center_horizontal"
             android:gravity="center_horizontal"/>
 
-        <GridView
+        <com.valentech.p4gguide.view.ScrollGridView
             android:id="@+id/location_grid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
