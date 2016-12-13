@@ -10,6 +10,7 @@ public class SocialLink {
     private Availability availability;
     private ArrayList<Rank> rank;
     private String notes;
+    private String title;
 
     public String getNotes() {
         return notes;
@@ -33,5 +34,13 @@ public class SocialLink {
 
     public void setRank(ArrayList<Rank> rank) {
         this.rank = rank;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }

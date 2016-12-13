@@ -1,4 +1,5 @@
 {
+    "title" : "Magician Arcana : Yosuke Hanamura",
 	"availability" : {
 		"monday"     : true,
 		"tuesday"    : false,
@@ -15,14 +16,13 @@
 			"sundays"  : "Junes"
 		}
 	},
-	
 	"rank" : [
 		{
 			"level" : 1,
 			"points" : 0,
 			"skill" : "Trafuri",
 			"choices" : [{
-				"dialogue" : "Yosuke: Sorry about that. You know me, i'm infamous around here.",
+				"dialogue" : "Yosuke: Sorry about that. You know me, I'm infamous around here.",
 				"options" : [
 					{
 						"response" : "It must be tough.",

@@ -19,6 +19,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.valentech.p4gguide.R;
 import com.valentech.p4gguide.model.social_link.Availability;
+import com.valentech.p4gguide.model.social_link.Location;
 import com.valentech.p4gguide.model.social_link.SocialLink;
 import com.valentech.p4gguide.util.ResourceUtility;
 
@@ -28,6 +29,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.zip.GZIPInputStream;
 
 import static com.valentech.p4gguide.util.ResourceUtility.getPixelsFromDP;
 import static com.valentech.p4gguide.util.ResourceUtility.getSocialLinkImgId;
@@ -72,35 +74,69 @@ public class IndividualSocialLinkFragment extends Fragment {
     private void displayLinkInformation(SocialLink socialLink, LinearLayout layout, LayoutInflater inflater) {
         View view = inflater.inflate(R.layout.social_link_header_card, layout, false);
 
+        //set title and image
         ImageView image = (ImageView) view.findViewById(R.id.link_header_card_image);
-
         image.setImageDrawable(getResources().getDrawable(getSocialLinkImgId(getActivity(), name)));
         TextView itemName = (TextView) view.findViewById(R.id.link_header_card_name);
-        itemName.setText(name);
+        itemName.setText(socialLink.getTitle());
 
+        //set availability calendar
+        GridView calendarGrid = (GridView) view.findViewById(R.id.calendar_grid);
+        GridView locationGrid = (GridView) view.findViewById(R.id.location_grid);
+        if(socialLink.getAvailability() != null) {
+            calendarGrid.setAdapter(new CalendarAdapter(getActivity(), R.layout.generic_grid_item, getCalendarItems(socialLink)));
+            locationGrid.setAdapter(new LocationAdapter(getActivity(), R.layout.generic_grid_item, getLocationItems(socialLink.getAvailability().getLocation())));
+        } else {
+            calendarGrid.setVisibility(View.GONE);
+            locationGrid.setVisibility(View.GONE);
+        }
+
+        //set activation info
+        TextView activationTextView = (TextView) view.findViewById(R.id.social_link_activation);
+        if(socialLink.getAvailability() != null && socialLink.getAvailability().getActivation() != null) {
+            activationTextView.setText(socialLink.getAvailability().getActivation());
+        } else {
+            view.findViewById(R.id.social_link_activation_heading).setVisibility(View.GONE);
+            activationTextView.setVisibility(View.GONE);
+        }
+
+        //set last day info
+        TextView lastDayTextView = (TextView) view.findViewById(R.id.social_link_last);
+        if(socialLink.getAvailability() != null && socialLink.getAvailability().getLast() != null) {
+            lastDayTextView.setText(socialLink.getAvailability().getLast());
+        } else {
+            view.findViewById(R.id.social_link_last_heading).setVisibility(View.GONE);
+            lastDayTextView.setVisibility(View.GONE);
+        }
+
+        //set notes section
+        TextView notesTextView = (TextView) view.findViewById(R.id.social_link_notes);
+        if(socialLink.getNotes() != null) {
+            notesTextView.setText(socialLink.getNotes());
+        } else {
+            view.findViewById(R.id.social_link_notes_heading).setVisibility(View.GONE);
+            notesTextView.setVisibility(View.GONE);
+        }
+        layout.addView(view);
+    }
+
+    private ArrayList<CalendarItem> getCalendarItems(SocialLink socialLink) {
         List<String> days = Arrays.asList(getResources().getStringArray(R.array.social_link_days));
         ArrayList<CalendarItem> calendarItems = new ArrayList<>();
-
-        ArrayList<CalendarItem> tempArray = new ArrayList<>();
         for(String day : days) {
-            calendarItems.add(new CalendarItem(CalendarItemType.HEADER, day, false));
-
             try {
                 Field field = Availability.class.getDeclaredField(ResourceUtility.sanitizeItemName(day));
                 field.setAccessible(true);
                 Boolean available = field.getBoolean(socialLink.getAvailability());
-                tempArray.add(new CalendarItem(CalendarItemType.VALUE, "", available));
+                calendarItems.add(new CalendarItem(day, available));
             } catch (Exception ignored) {
-                ignored.printStackTrace();
+                //assume false
+                if(day != null) {
+                    calendarItems.add(new CalendarItem(day, false));
+                }
             }
         }
-
-        calendarItems.addAll(tempArray);
-
-        GridView calendarGrid = (GridView) view.findViewById(R.id.calendar_grid);
-        calendarGrid.setAdapter(new CalendarAdapter(getActivity(), R.layout.generic_grid_item, calendarItems));
-
-        layout.addView(view);
+        return calendarItems;
     }
 
     private class CalendarAdapter extends ArrayAdapter<CalendarItem> {
@@ -118,47 +154,77 @@ public class IndividualSocialLinkFragment extends Fragment {
             final CalendarItem item = getItem(position);
             RelativeLayout container = (RelativeLayout) convertView.findViewById(R.id.grid_item_container);
 
-            if(item != null && item.getType() == CalendarItemType.HEADER) {
+            if(item != null) {
                 TextView headerText = new TextView(getActivity());
                 headerText.setText(item.getDayName());
                 container.addView(headerText);
-            } else if(item != null && item.getType() == CalendarItemType.VALUE) {
-                TextView headerText = new TextView(getActivity());
-                headerText.setText("X");
-                if(item.isAvailable()) {
-                    headerText.setText("O");
+
+                if(item.isAvailable) {
+                    container.setBackgroundColor(getActivity().getResources().getColor(R.color.available));
+                } else {
+                    container.setBackgroundColor(getActivity().getResources().getColor(R.color.unavailable));
                 }
-                container.addView(headerText);
+            }
+
+
+            return convertView;
+        }
+    }
+
+    private ArrayList<String> getLocationItems(Location location) {
+        List<String> days = Arrays.asList(getResources().getStringArray(R.array.social_link_locations));
+        ArrayList<String> locationItems = new ArrayList<>();
+
+        locationItems.add(days.get(0));
+        if(location.getWeekdays() != null) {
+            locationItems.add(location.getWeekdays());
+        } else {
+            locationItems.add(getString(R.string.not_available));
+        }
+
+        locationItems.add(days.get(1));
+        if(location.getSundays() != null) {
+            locationItems.add(location.getWeekdays());
+        } else {
+            locationItems.add(getString(R.string.not_available));
+        }
+        return locationItems;
+    }
+
+    private class LocationAdapter extends ArrayAdapter<String> {
+
+        private LayoutInflater inflater;
+
+        LocationAdapter(Context context, int resource, ArrayList<String> socialLinkItems) {
+            super(context, resource, socialLinkItems);
+            inflater = LayoutInflater.from(context);
+        }
+
+        @Override
+        public View getView(final int position, View convertView, ViewGroup parent) {
+            convertView = inflater.inflate(R.layout.generic_grid_item, null);
+            final String item = getItem(position);
+            RelativeLayout container = (RelativeLayout) convertView.findViewById(R.id.grid_item_container);
+
+            if(item != null) {
+                TextView textView = new TextView(getActivity());
+                textView.setText(item);
+                container.addView(textView);
             }
 
             return convertView;
         }
-
-        private int getWidth() {
-            int sideMargins = getPixelsFromDP(16) * 2;
-            int gridSpacing = getPixelsFromDP(8) * 2;
-            return (Resources.getSystem().getDisplayMetrics().widthPixels - (sideMargins + gridSpacing))/ 8;
-        }
     }
 
-    private enum CalendarItemType {
-        HEADER,
-        VALUE
-    }
+
 
     private class CalendarItem {
-        private CalendarItemType type = CalendarItemType.HEADER;
         private String dayName = "";
         private boolean isAvailable = false;
 
-        CalendarItem(CalendarItemType type, String dayName, boolean isAvailable) {
-            this.type = type;
+        CalendarItem(String dayName, boolean isAvailable) {
             this.dayName = dayName;
             this.isAvailable = isAvailable;
-        }
-
-        CalendarItemType getType() {
-            return type;
         }
 
         String getDayName() {
