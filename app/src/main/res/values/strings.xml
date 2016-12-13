@@ -32,4 +32,15 @@
         <item>Aeon</item>
         <item>Judgement</item>
     </string-array>
+
+    <string-array name="social_link_days">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+        <item>Rain</item>
+    </string-array>
 </resources>

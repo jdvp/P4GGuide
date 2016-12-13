@@ -9,7 +9,7 @@ import android.util.TypedValue;
  */
 
 public class ResourceUtility {
-    private static String sanitizeItemName(String item) {
+    public static String sanitizeItemName(String item) {
         return item.replaceAll("[^a-zA-Z]", "").toLowerCase().trim();
     }
 

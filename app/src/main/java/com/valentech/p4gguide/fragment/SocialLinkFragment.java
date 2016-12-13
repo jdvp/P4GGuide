@@ -66,15 +66,6 @@ public class SocialLinkFragment extends Fragment {
             TextView itemName = (TextView) convertView.findViewById(R.id.social_link_item_name);
             itemName.setText(item);
 
-            if(position < 3) {
-                View card = convertView.findViewById(R.id.social_link_card);
-                if(card != null && card.getLayoutParams() instanceof LinearLayout.LayoutParams) {
-                    LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) card.getLayoutParams();
-                    params.setMargins(0, getPixelsFromDP(16), 0, 0 );
-                    card.setLayoutParams(params);
-                }
-            }
-
             convertView.setLayoutParams(new GridView.LayoutParams(getWidth(), GridView.AUTO_FIT));
             convertView.setOnClickListener(new View.OnClickListener() {
                 @Override
