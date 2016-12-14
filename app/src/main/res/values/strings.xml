@@ -13,8 +13,10 @@
     <string name="social_link_results">Results:</string>
     <string name="social_link_ranking">Ranking level %1$d to %2$d</string>
     <string name="social_link_points">Friendship points needed: %1$d</string>
-    <string name="social_link_choices">Dialogue Choices:\nShows friendship points gained by selecting certain
-    dialogue choices. (W is with a persona that matches this arcana and W/O is without a matching persona.)</string>
+    <string name="social_link_choices">Dialogue Choices:</string>
+    <string name="dialogue_explanation">The dialogue options on the following cards show the amount of friendship points gained by selecting certain
+    dialogue choices. W indicates the amount of friendship points gained if you have a persona that matches this arcana in your possession and W/O indicates
+    the amount of points received for selected the choice without having a persona of this arcana.</string>
     <string name="not_available">N/A</string>
 
     <string-array name="social_link_name_list">

@@ -3,8 +3,10 @@ package com.valentech.p4gguide.fragment;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.res.Resources;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,6 +33,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 
 import static com.valentech.p4gguide.util.ResourceUtility.getSocialLinkImgId;
@@ -74,6 +77,10 @@ public class IndividualSocialLinkFragment extends Fragment {
     }
 
     private void createRankCards(SocialLink socialLink, LinearLayout layout, LayoutInflater inflater) {
+        if(socialLink.getRank() != null && !socialLink.getRank().isEmpty()) {
+            View dialogueExplanationView = inflater.inflate(R.layout.dialgoue_explanation_card, layout, false);
+            layout.addView(dialogueExplanationView);
+        }
         for(Rank rank : socialLink.getRank()) {
             View view = inflater.inflate(R.layout.social_link_rank_card, layout, false);
 
@@ -87,11 +94,26 @@ public class IndividualSocialLinkFragment extends Fragment {
 
             //set choices
             LinearLayout choiceLayout = (LinearLayout) view.findViewById(R.id.choice_list);
+            boolean isEvenRow = false;
             for(Choice choice : rank.getChoices()) {
                 View choiceView = inflater.inflate(R.layout.choice_item, layout, false);
 
+                if(isEvenRow) {
+                    choiceView.setBackgroundColor(getActivity().getResources().getColor(R.color.dialogue_row_one));
+                } else {
+                    choiceView.setBackgroundColor(getActivity().getResources().getColor(R.color.dialogue_row_two));
+                }
+
+                isEvenRow = !isEvenRow;
+
                 TextView dialogue = (TextView) choiceView.findViewById(R.id.dialogue);
                 dialogue.setText(choice.getDialogue());
+
+                if(choice.getSpecial() != null) {
+                    TextView special = (TextView) choiceView.findViewById(R.id.special);
+                    special.setText(choice.getSpecial());
+                    special.setVisibility(View.VISIBLE);
+                }
 
                 ArrayList<String> optionArray = new ArrayList<>();
                 optionArray.add("");
@@ -101,8 +123,16 @@ public class IndividualSocialLinkFragment extends Fragment {
                 ArrayList<Option> options = choice.getOptions();
                 for(int i = 0; i < options.size(); i++) {
                     optionArray.add((i + 1) + ". " + options.get(i).getResponse());
-                    optionArray.add(options.get(i).getWith());
-                    optionArray.add(options.get(i).getWithout());
+                    String with = options.get(i).getWith();
+                    if(with == null) {
+                        with = "-";
+                    }
+                    String without = options.get(i).getWithout();
+                    if(without == null) {
+                        without = "-";
+                    }
+                    optionArray.add(with);
+                    optionArray.add(without);
                 }
 
                 GridView choiceGrid = (GridView) choiceView.findViewById(R.id.choice_grid);
@@ -133,12 +163,20 @@ public class IndividualSocialLinkFragment extends Fragment {
 
         //set availability calendar
         GridView calendarGrid = (GridView) view.findViewById(R.id.calendar_grid);
+        ArrayList<CalendarItem> calendarItems = getCalendarItems(socialLink);
+        if(!calendarItems.isEmpty()) {
+            calendarGrid.setAdapter(new CalendarAdapter(getActivity(), R.layout.generic_grid_item, calendarItems));
+        } else {
+            view.findViewById(R.id.calendar_grid_header).setVisibility(View.GONE);
+            calendarGrid.setVisibility(View.GONE);
+        }
+
+        //set location availability
         GridView locationGrid = (GridView) view.findViewById(R.id.location_grid);
-        if(socialLink.getAvailability() != null) {
-            calendarGrid.setAdapter(new CalendarAdapter(getActivity(), R.layout.generic_grid_item, getCalendarItems(socialLink)));
+        if(socialLink.getAvailability() != null && socialLink.getAvailability().getLocation() != null) {
             locationGrid.setAdapter(new GenericGridTextAdapter(getActivity(), R.layout.generic_grid_item, getLocationItems(socialLink.getAvailability().getLocation())));
         } else {
-            calendarGrid.setVisibility(View.GONE);
+            view.findViewById(R.id.location_grid_header).setVisibility(View.GONE);
             locationGrid.setVisibility(View.GONE);
         }
 
@@ -172,6 +210,10 @@ public class IndividualSocialLinkFragment extends Fragment {
     }
 
     private ArrayList<CalendarItem> getCalendarItems(SocialLink socialLink) {
+        if(socialLink.getAvailability() == null) {
+            return new ArrayList<>();
+        }
+
         List<String> days = Arrays.asList(getResources().getStringArray(R.array.social_link_days));
         ArrayList<CalendarItem> calendarItems = new ArrayList<>();
         for(String day : days) {
@@ -186,6 +228,15 @@ public class IndividualSocialLinkFragment extends Fragment {
                     calendarItems.add(new CalendarItem(day, false));
                 }
             }
+        }
+
+        //check for unique values
+        HashSet<Boolean> vals = new HashSet<>();
+        for(CalendarItem item : calendarItems) {
+            vals.add(item.isAvailable());
+        }
+        if(vals.size() <= 1) {
+            calendarItems.clear();
         }
         return calendarItems;
     }
@@ -210,7 +261,7 @@ public class IndividualSocialLinkFragment extends Fragment {
                 headerText.setText(item.getDayName());
                 container.addView(headerText);
 
-                if(item.isAvailable) {
+                if(item.isAvailable()) {
                     container.setBackgroundColor(getActivity().getResources().getColor(R.color.available));
                 } else {
                     container.setBackgroundColor(getActivity().getResources().getColor(R.color.unavailable));
@@ -272,9 +323,13 @@ public class IndividualSocialLinkFragment extends Fragment {
 
                 if(isTwoLines) {
                     textView.setLines(2);
+                    if(position % 3 == 0) {
+                        container.setGravity(Gravity.START);
+                    }
                 }
             }
 
+            container.setOnClickListener(null);
             return convertView;
         }
     }

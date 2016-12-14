@@ -29,6 +29,7 @@
             android:layout_marginBottom="16dp"/>
 
         <TextView
+            android:id="@+id/calendar_grid_header"
             android:text="@string/social_link_availability"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -43,6 +44,7 @@
             android:layout_marginBottom="16dp"/>
 
         <TextView
+            android:id="@+id/location_grid_header"
             android:text="@string/social_link_location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

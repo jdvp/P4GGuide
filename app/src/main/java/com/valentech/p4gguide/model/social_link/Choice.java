@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 public class Choice {
     private String dialogue;
+    private String special;
     private ArrayList<Option> options;
 
     public String getDialogue() {
@@ -24,5 +25,13 @@ public class Choice {
 
     public void setOptions(ArrayList<Option> options) {
         this.options = options;
+    }
+
+    public String getSpecial() {
+        return special;
+    }
+
+    public void setSpecial(String special) {
+        this.special = special;
     }
 }

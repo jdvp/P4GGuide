@@ -16,6 +16,7 @@
 			"sundays"  : "Junes"
 		}
 	},
+    "notes" : "Max Social Link Item is the Buddy's Bandage which allows you to fuse Susano-o and Mada.",
 	"rank" : [
 		{
 			"level" : 1,
@@ -41,8 +42,337 @@
 			}
 			]
 		} , {
-        "level" : 2,
-        "points" : 2
-       }
-	]
+        "level": 2,
+        "points": 2,
+        "choices": [
+          {
+            "dialogue": "Yosuke: Wait a minute... Am I starting to sound like Teddie?",
+            "options": [
+              {
+                "response": "He's sounding like you too.",
+                "with": "-",
+                "without": "-"
+              },
+              {
+                "response": "Teddie's cute",
+                "with": "2",
+                "without": "1"
+              },
+              {
+                "response": "Hmm, you're looking hairier",
+                "with": "3",
+                "without": "3"
+              }
+            ]
+          },
+          {
+            "dialogue": "Yosuke: Looks like someone got my address. I get a lot of spam.",
+            "options": [
+              {
+                "response": "You don't block them?",
+                "with": "-",
+                "without": "-"
+              },
+              {
+                "response": "Why, not change addresses?",
+                "with": "-",
+                "without": "-"
+              },
+              {
+                "response": "Eh, what can you do.",
+                "with": "-",
+                "without": "-"
+              }
+            ]
+          }
+        ]
+      }, {
+        "level": 3,
+        "points": 3,
+        "results" : "Learns Dekaja",
+        "choices": [
+          {
+            "dialogue": "Yosuke: Phew, i'm beat... i am not the complaints department...",
+            "options": [
+              {
+                "response": "That must be hard.",
+                "with": "1",
+                "without": "1"
+              },
+              {
+                "response": "Don't strain yourself.",
+                "with": "2",
+                "without": "1"
+              },
+              {
+                "response": "You're incredible.",
+                "with": "3",
+                "without": "2"
+              }
+            ]
+          },
+          {
+            "dialogue": "Yosuke:I have to do what i can...",
+            "options": [
+              {
+                "response": "That's the spirit!",
+                "with": "3",
+                "without": "2"
+              },
+              {
+                "response": "Don't get too excited.",
+                "with": "-",
+                "without": "-"
+              },
+              {
+                "response": "What can you do?",
+                "with": "-",
+                "without": "-"
+              }
+            ]
+          }
+        ]
+      }, {
+        "level": 4,
+        "points": 4,
+        "choices": [
+          {
+            "dialogue": "Yosuke: So...? You keep the goods under your futon?",
+            "options": [
+              {
+                "response": "Of course.",
+                "with": "3",
+                "without": "3"
+              },
+              {
+                "response": "Huh?",
+                "with": "3",
+                "without": "3"
+              },
+              {
+                "response": "What, don't you?",
+                "with": "3",
+                "without": "2"
+              }
+            ]
+          },
+          {
+            "dialogue": "Yosuke: So, you ever invited a girl in here?",
+            "options": [
+              {
+                "response": "I have.",
+                "with": "3",
+                "without": "2"
+              },
+              {
+                "response": "I haven't.",
+                "with": "3",
+                "without": "2"
+              },
+              {
+                "response": "I will soon.",
+                "with": "3",
+                "without": "3"
+              }
+            ]
+          }
+        ]
+      }, {
+        "level": 5,
+        "points": 4,
+        "results" : "Learns Auto-Sukukaja",
+        "choices": [
+          {
+            "dialogue": "Yosuke: But hey, I'm glad you were there! Thanks.",
+            "options": [
+              {
+                "response": "No problem.",
+                "with": "3",
+                "without": "3"
+              },
+              {
+                "response": "Tell me next time!",
+                "with": "3",
+                "without": "?"
+              },
+              {
+                "response": "It was fun.",
+                "with": "3",
+                "without": "?"
+              }
+            ]
+          },
+          {
+            "dialogue": "Yosuke: So... there's no need to bother with outsiders.",
+            "options": [
+              {
+                "response": "You're right.",
+                "with": "3",
+                "without": "3"
+              },
+              {
+                "response": "Man, you're mature.",
+                "with": "3",
+                "without": "-"
+              },
+              {
+                "response": "No need to hold back.",
+                "with": "2",
+                "without": "2"
+              }
+            ]
+          }
+        ]
+      }, {
+        "level": 6,
+        "points": 6,
+        "choices": [
+          {
+            "dialogue": "They started to badmouth Saki-senpai.",
+            "options": [
+              {
+                "response": "Shut up!"
+              },
+              {
+                "response": "Calm down man... (Level 3 Understanding Required)"
+              },
+              {
+                "response": "I feel bad for Saki-senpai"
+              }
+            ]
+          },
+          {
+            "dialogue": "Yosuke: I just blurted out a buncha crap, huh?",
+            "options": [
+              {
+                "response": "You were just upset."
+              },
+              {
+                "response": "Feel better now?"
+              },
+              {
+                "response": "I know how it is."
+              }
+            ]
+          }
+        ]
+      }, {
+        "level": 7,
+        "points": 6,
+        "results": "Learns Dialrama",
+        "choices": [
+          {
+            "dialogue": "Yosuke: But then...",
+            "options": [
+              {
+                "response": "She dumped you?"
+              },
+              {
+                "response": "She died?"
+              }
+            ]
+          },
+          {
+            "dialogue": "Yosuke: I'm sorry... Saki-senpai. I'm sorry... [Main Character].",
+            "options": [
+              {
+                "response": "Just take it slow."
+              },
+              {
+                "response": "I understand."
+              },
+              {
+                "response": "Don't apologize."
+              }
+            ]
+          },
+          {
+            "dialogue": "Yosuke: Main Character... I think i'm all cried out....",
+            "special" : "Only available if you pick the pick the 3rd Choice then the 1st Choice on when ranking level 6 to 7.",
+            "options": [
+              {
+                "response": "Pat his head."
+              },
+              {
+                "response": "Hug him.."
+              },
+              {
+                "response": "Leave him be."
+              }
+            ]
+          }
+        ]
+      }, {
+        "level": 8,
+        "points": 4,
+        "choices": [
+          {
+            "dialogue": "Yosuke is smiling sadly...",
+            "options": [
+              {
+                "response": "Cheer up.",
+                "with": "2",
+                "without": "2"
+              },
+              {
+                "response": "Still sad about Saki-senpai?"
+              },
+              {
+                "response": "Be a man. Stand up straight."
+              }
+            ]
+          },
+          {
+            "dialogue": "Yosuke: Just being born, living your life... Before you know it, you're already special to someone.",
+            "options": [
+              {
+                "response": "You're right.",
+                "with": "3",
+                "without": "3"
+              },
+              {
+                "response": "That's not true.",
+                "with": "3",
+                "without": "?"
+              },
+              {
+                "response": "I don't get it.",
+                "with": "3",
+                "without": "?"
+              }
+            ]
+          }
+        ]
+      }, {
+        "level": 9,
+        "points": 8,
+        "results" : "Learns Evade Electric",
+        "choices": [
+          {
+            "dialogue": "Yosuke: I like you for that, and I'm proud of you... But  I guess I was jealous at the same time.",
+            "options": [
+              {
+                "response": "I didn't know."
+              },
+              {
+                "response": "It can't be helped."
+              },
+              {
+                "response": "I guess?"
+              }
+            ]
+          },
+          {
+            "dialogue": "Will hitting Yousuke make you and him equal...?",
+            "options": [
+              {
+                "response": "Hitting you won't do that."
+              },
+              {
+                "response": "Then let's get equal."
+              }
+            ]
+          }
+        ]
+      }]
 }

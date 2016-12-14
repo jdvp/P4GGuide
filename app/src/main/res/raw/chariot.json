@@ -1,0 +1,61 @@
+{
+  "title" : "Chariot Arcana : Chie Satonaka",
+	"availability" : {
+		"monday"     : true,
+		"tuesday"    : true,
+		"wednesday"  : false,
+		"thursday"   : true,
+		"friday"     : false,
+		"saturday"   : true,
+		"sunday"     : false,
+		"rain"       : false,
+		"activation" : "Automatic on April 18th",
+		"last"   : "November 27",
+		"location"   : {
+			"weekdays" : "School Roof",
+			"sundays"  : "Shopping District, South"
+		}
+	},
+	"rank" : [
+		{
+			"level" : 1,
+			"points" : 0,
+			"results" : "Learns Rebellion",
+			"choices" : [{
+				"dialogue" : "Chie: Still, now's the time to train right?",
+				"options" : [
+					{
+						"response" : "Right.",
+						"with"     : "3",
+						"without"  : "3"
+					}, {
+						"response" : "For what?",
+						"with"     : "-",
+						"without"  : "-"
+					}
+				]
+			} , {
+				"dialogue" : "Chie: ...No?",
+				"options" : [
+					{
+						"response" : "I'm cool with it.",
+						"with"     : "3",
+						"without"  : "2"
+					}, {
+						"response" : "I guess so...",
+						"with"     : "2",
+						"without"  : "1"
+					}, {
+						"response" : "What a pain.",
+						"with"     : "-",
+						"without"  : "-"
+					}
+				]
+			}
+			]
+		} , {
+        "level" : 2,
+        "points" : 3
+       }
+	]
+}

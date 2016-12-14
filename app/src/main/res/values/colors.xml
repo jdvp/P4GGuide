@@ -6,4 +6,7 @@
     <color name="white">#FFFFFF</color>
     <color name="unavailable">#FFCDD2</color>
     <color name="available">#69F0AE</color>
+    <color name="dialogue_special">#F44336</color>
+    <color name="dialogue_row_one">#E8F5E9</color>
+    <color name="dialogue_row_two">#E0F7FA</color>
 </resources>

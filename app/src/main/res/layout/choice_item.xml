@@ -7,8 +7,7 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="8dp"
-    android:paddingBottom="8dp"
-    android:layout_marginTop="8dp">
+    android:paddingBottom="8dp">
 
     <TextView
         android:id="@+id/dialogue"
@@ -17,9 +16,20 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"/>
 
+    <TextView
+        android:id="@+id/special"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:textSize="12sp"
+        android:textColor="@color/dialogue_special"
+        android:visibility="gone"/>
+
     <com.valentech.p4gguide.view.ScrollGridView
         android:id="@+id/choice_grid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:numColumns="3" />
+        android:numColumns="3"
+        android:clickable="false"/>
 </LinearLayout>
