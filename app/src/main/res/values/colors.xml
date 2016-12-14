@@ -9,4 +9,6 @@
     <color name="dialogue_special">#F44336</color>
     <color name="dialogue_row_one">#E8F5E9</color>
     <color name="dialogue_row_two">#E0F7FA</color>
+    <color name="dialogue_row_one_lovers">#FCE4EC</color>
+    <color name="dialogue_row_two_lovers">#FFEBEE</color>
 </resources>

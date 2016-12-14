@@ -36,6 +36,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 
+import static com.valentech.p4gguide.util.ResourceUtility.getPixelsFromDP;
 import static com.valentech.p4gguide.util.ResourceUtility.getSocialLinkImgId;
 
 /**
@@ -95,13 +96,41 @@ public class IndividualSocialLinkFragment extends Fragment {
             //set choices
             LinearLayout choiceLayout = (LinearLayout) view.findViewById(R.id.choice_list);
             boolean isEvenRow = false;
+            boolean hasLoversChoices = hasLoversChoices(rank);
+            boolean isFirstFriendAfterLovers = true;
+            if(hasLoversChoices) {
+                TextView lovers = new TextView(getActivity());
+                lovers.setText(getString(R.string.lovers_relationship));
+                lovers.setPadding(getPixelsFromDP(16), 0, getPixelsFromDP(16), 0);
+                lovers.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+                lovers.setGravity(Gravity.CENTER_HORIZONTAL);
+                choiceLayout.addView(lovers);
+            }
             for(Choice choice : rank.getChoices()) {
                 View choiceView = inflater.inflate(R.layout.choice_item, layout, false);
-
-                if(isEvenRow) {
-                    choiceView.setBackgroundColor(getActivity().getResources().getColor(R.color.dialogue_row_one));
+                if(choice.isLovers()) {
+                    if(isEvenRow) {
+                        choiceView.setBackgroundColor(getActivity().getResources().getColor(R.color.dialogue_row_one_lovers));
+                    } else {
+                        choiceView.setBackgroundColor(getActivity().getResources().getColor(R.color.dialogue_row_two_lovers));
+                    }
                 } else {
-                    choiceView.setBackgroundColor(getActivity().getResources().getColor(R.color.dialogue_row_two));
+                    if(isEvenRow) {
+                        choiceView.setBackgroundColor(getActivity().getResources().getColor(R.color.dialogue_row_one));
+                    } else {
+                        choiceView.setBackgroundColor(getActivity().getResources().getColor(R.color.dialogue_row_two));
+                    }
+
+                    if(isFirstFriendAfterLovers) {
+
+                        TextView friends = new TextView(getActivity());
+                        friends.setText(getString(R.string.friends_relationship));
+                        friends.setPadding(getPixelsFromDP(16), getPixelsFromDP(8), getPixelsFromDP(16), 0);
+                        friends.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+                        friends.setGravity(Gravity.CENTER_HORIZONTAL);
+                        choiceLayout.addView(friends);
+                        isFirstFriendAfterLovers = false;
+                    }
                 }
 
                 isEvenRow = !isEvenRow;
@@ -150,6 +179,19 @@ public class IndividualSocialLinkFragment extends Fragment {
             }
             layout.addView(view);
         }
+    }
+
+    private boolean hasLoversChoices(Rank rank) {
+        if(rank == null || rank.getLevel() < 9) {
+            return false;
+        }
+
+        for (Choice c: rank.getChoices()){
+            if(c.isLovers()) {
+                return true;
+            }
+        }
+        return false;
     }
 
     private void createHeaderCard(SocialLink socialLink, LinearLayout layout, LayoutInflater inflater) {

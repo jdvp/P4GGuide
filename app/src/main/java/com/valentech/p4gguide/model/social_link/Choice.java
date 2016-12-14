@@ -9,6 +9,7 @@ import java.util.ArrayList;
 public class Choice {
     private String dialogue;
     private String special;
+    private boolean lovers;
     private ArrayList<Option> options;
 
     public String getDialogue() {
@@ -33,5 +34,13 @@ public class Choice {
 
     public void setSpecial(String special) {
         this.special = special;
+    }
+
+    public boolean isLovers() {
+        return lovers;
+    }
+
+    public void setLovers(boolean lovers) {
+        this.lovers = lovers;
     }
 }

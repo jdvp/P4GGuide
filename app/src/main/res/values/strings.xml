@@ -18,6 +18,8 @@
     dialogue choices. W indicates the amount of friendship points gained if you have a persona that matches this arcana in your possession and W/O indicates
     the amount of points received for selected the choice without having a persona of this arcana.</string>
     <string name="not_available">N/A</string>
+    <string name="lovers_relationship">Lovers Relationship Choices</string>
+    <string name="friends_relationship">Friends Relationship Choices</string>
 
     <string-array name="social_link_name_list">
         <item>Fool</item>

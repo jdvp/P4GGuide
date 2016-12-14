@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,29 +7,29 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="8dp"
-    android:paddingBottom="8dp">
+    android:paddingBottom="8dp"
+    android:layout_gravity="left"
+    android:gravity="left">
 
     <TextView
         android:id="@+id/dialogue"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"/>
+        android:layout_height="wrap_content"/>
 
     <TextView
         android:id="@+id/special"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
         android:textSize="12sp"
         android:textColor="@color/dialogue_special"
-        android:visibility="gone"/>
+        android:visibility="gone"
+        android:layout_below="@id/dialogue"/>
 
     <com.valentech.p4gguide.view.ScrollGridView
         android:id="@+id/choice_grid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:numColumns="3"
-        android:clickable="false"/>
-</LinearLayout>
+        android:clickable="false"
+        android:layout_below="@id/special"/>
+</RelativeLayout>
