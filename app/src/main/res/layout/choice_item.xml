@@ -25,11 +25,11 @@
         android:visibility="gone"
         android:layout_below="@id/dialogue"/>
 
-    <com.valentech.p4gguide.view.ScrollGridView
+    <LinearLayout
+        android:orientation="vertical"
         android:id="@+id/choice_grid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:numColumns="3"
         android:clickable="false"
         android:layout_below="@id/special"/>
 </RelativeLayout>

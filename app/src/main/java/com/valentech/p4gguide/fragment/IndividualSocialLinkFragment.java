@@ -144,14 +144,15 @@ public class IndividualSocialLinkFragment extends Fragment {
                     special.setVisibility(View.VISIBLE);
                 }
 
-                ArrayList<String> optionArray = new ArrayList<>();
-                optionArray.add("");
-                optionArray.add("W");
-                optionArray.add("W/O");
+                LinearLayout choiceGrid = (LinearLayout) choiceView.findViewById(R.id.choice_grid);
+                View headerView = inflater.inflate(R.layout.choice_grid_item, layout, false);
+                ((TextView)headerView.findViewById(R.id.dialogue_item)).setText("");
+                ((TextView)headerView.findViewById(R.id.with)).setText("W");
+                ((TextView)headerView.findViewById(R.id.without)).setText("W/O");
+                choiceGrid.addView(headerView);
 
                 ArrayList<Option> options = choice.getOptions();
                 for(int i = 0; i < options.size(); i++) {
-                    optionArray.add((i + 1) + ". " + options.get(i).getResponse());
                     String with = options.get(i).getWith();
                     if(with == null) {
                         with = "-";
@@ -160,12 +161,12 @@ public class IndividualSocialLinkFragment extends Fragment {
                     if(without == null) {
                         without = "-";
                     }
-                    optionArray.add(with);
-                    optionArray.add(without);
+                    View itemView = inflater.inflate(R.layout.choice_grid_item, layout, false);
+                    ((TextView)itemView.findViewById(R.id.dialogue_item)).setText((i + 1) + ". " + options.get(i).getResponse());
+                    ((TextView)itemView.findViewById(R.id.with)).setText(with);
+                    ((TextView)itemView.findViewById(R.id.without)).setText(without);
+                    choiceGrid.addView(itemView);
                 }
-
-                GridView choiceGrid = (GridView) choiceView.findViewById(R.id.choice_grid);
-                choiceGrid.setAdapter(new GenericGridTextAdapter(getActivity(), R.layout.generic_grid_item, optionArray, true));
                 choiceLayout.addView(choiceView);
             }
 

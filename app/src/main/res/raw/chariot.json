@@ -16,6 +16,7 @@
       "sundays": "Shopping District, South"
     }
   },
+  "notes" : "Max Social Link Item is the Wristband which allows you to fuse Suzuka Gongen and Futsunushi.",
   "rank": [
     {
       "level": 1,
@@ -67,7 +68,7 @@
           "dialogue": "Chie: But me, I totally lose it. Kinda funny, huh?",
           "options": [
             {
-              "response": "It's Cute (Requires LV 3 Courage)",
+              "response": "It's cute (Requires LV 3 Courage)",
               "with": "3",
               "without": "3"
             },
@@ -102,7 +103,7 @@
               "without": "2"
             },
             {
-              "response": "Quit bragging on her(Requires LV 3 Courage)",
+              "response": "Quit bragging on her (Requires LV 3 Courage)",
               "with": "3",
               "without": "3"
             }
@@ -220,7 +221,7 @@
           "dialogue": "Things aren't looking good...",
           "options": [
             {
-              "response": "Hold Chie back.(requires LV 4 Courage)"
+              "response": "Hold Chie back. (requires LV 4 Courage)"
             },
             {
               "response": "Fight them yourself."
@@ -327,6 +328,7 @@
     {
       "level": 9,
       "points": 10,
+      "results": "Learns Evade Fire",
       "choices": [
         {
           "dialogue": "Chie: Oh w-well, how did the room you had back home look?",

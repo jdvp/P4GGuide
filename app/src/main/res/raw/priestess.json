@@ -1,0 +1,461 @@
+{
+  "title": "Priestess Arcana: Yukiko Amagi",
+  "availability": {
+    "monday": true,
+    "tuesday": true,
+    "wednesday": true,
+    "thursday": true,
+    "friday": false,
+    "saturday": false,
+    "sunday": false,
+    "rain": false,
+    "activation": "Automatic on May 17th",
+    "last": "November 27\n(Even though Nov 27 is the last day you can still raise the Social Link by hanging out on Sundays)",
+    "location": {
+      "weekdays": "Classroom Building 1F",
+      "sundays": "Shopping District, South"
+    }
+  },
+  "notes" : "Max Social Link Item is the Shrine Charm which allows you to fuse Amaterasu and Scathach.",
+  "rank": [
+    {
+      "level": 1,
+      "points": 0,
+      "results": "Learns Mudo",
+      "choices": [
+        {
+          "dialogue": "Yukiko: Sensei recommended this book to me because it has details on a bunch of different job licenses...",
+          "options": [
+            {
+              "response": "Going to apply for one?",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "Sensei?",
+              "with": "2",
+              "without": "2"
+            }
+          ]
+        },
+        {
+          "dialogue": "Yukiko: I was thinking something along the lines of an interior decorator... what you think?",
+          "options": [
+            {
+              "response": "Sounds good.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "What's that?",
+              "with": "2",
+              "without": "3"
+            },
+            {
+              "response": "You decide.",
+              "with": "-",
+              "without": "-"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "points": 2,
+      "choices": [
+        {
+          "dialogue": "Yukiko: Even eggs come in so many varieties...",
+          "options": [
+            {
+              "response": "Making dinner at the inn?",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "On an errand?",
+              "with": "2",
+              "without": "2"
+            }
+          ]
+        },
+        {
+          "dialogue": "Yukiko: So i'm going to get some practice while I can!",
+          "options": [
+            {
+              "response": "Good luck.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "There's no point"
+            },
+            {
+              "response": "Any other skills?"
+            }
+          ]
+        },
+        {
+          "dialogue": "Yukiko: W-Will...you?",
+          "options": [
+            {
+              "response": "Count me in!  (Level 4 Courage Required)",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "I don't mind.",
+              "with": "2",
+              "without": "2"
+            },
+            {
+              "response": "I dunno."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "points": 2,
+      "results": "Learns Divine Grace",
+      "choices": [
+        {
+          "dialogue": "For some reason, an unusually pungent smell hangs in the air.",
+          "options": [
+            {
+              "response": "Let's Eat! (Level 3 Courage Required)",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Hold on, my stomach...",
+              "with": "2",
+              "without": "2"
+            },
+            {
+              "response": "Have you tried it?",
+              "with": "2",
+              "without": "2"
+            }
+          ]
+        },
+        {
+          "dialogue": "Yukiko looks sad...",
+          "options": [
+            {
+              "response": "There's always next time.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "This won't cut it."
+            },
+            {
+              "response": "Can I toss this?"
+            }
+          ]
+        },
+        {
+          "dialogue": "Yukiko: Umm ... I'm sorry to drag you around...",
+          "options": [
+            {
+              "response": "It's okay.",
+              "with": "2",
+              "without": "2"
+            },
+            {
+              "response": "It was fun.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Just don't feed me.",
+              "with": "2",
+              "without": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "points": 4,
+      "choices": [
+        {
+          "dialogue": "Yukiko: Then the furniture department. I want to look at the desk. Those and the lamps...",
+          "options": [
+            {
+              "response": "What's all this for?",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "Can you carry all that?"
+            }
+          ]
+        },
+        {
+          "dialogue": "Yukiko:  Those people are from some TV station. They wanted to cover the Amagi Inn.",
+          "options": [
+            {
+              "response": "Sounds good to me."
+            },
+            {
+              "response": "You said no?"
+            }
+          ]
+        },
+        {
+          "dialogue": "Yukiko: ...I'd feel better about leaving.",
+          "options": [
+            {
+              "response": "Are you serious?"
+            },
+            {
+              "response": "That's selfish"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "points": 5,
+      "results": "Learns Amrita",
+      "choices": [
+        {
+          "dialogue": "Yukiko: I wrote down everything I need, so this shouldn't take that long.",
+          "options": [
+            {
+              "response": "What are you making?"
+            },
+            {
+              "response": "Gotten any better yet?",
+              "with": "2",
+              "without": "2"
+            }
+          ]
+        },
+        {
+          "dialogue": "Yukiko: But it's not turning out quite like it does in the book, even though I'm following the directions.",
+          "options": [
+            {
+              "response": "Get someone to teach you."
+            },
+            {
+              "response": "Keep practicing.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "Want me to teach you?"
+            }
+          ]
+        },
+        {
+          "dialogue": "Yukiko: Are they that worried about my cooking...?",
+          "options": [
+            {
+              "response": "You're pretty bad."
+            },
+            {
+              "response": "If you started a fire..."
+            },
+            {
+              "response": "They care about you.",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "points": 6,
+      "choices": [
+        {
+          "dialogue": "Yukiko: Once I leave this town... I won't be able to come here again, will I...?",
+          "options": [
+            {
+              "response": "You're not coming back?"
+            },
+            {
+              "response": "You're really leaving?"
+            }
+          ]
+        },
+        {
+          "dialogue": "Yukiko: They all have the wrong idea... I'm really sorry...",
+          "options": [
+            {
+              "response": "It's okay.",
+              "with": "3"
+            },
+            {
+              "response": "They're not mistaken",
+              "with": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "points": 7,
+      "results": "Learns Mudoon",
+      "choices": [
+        {
+          "dialogue": "Yukiko: I'm sorry, I have to go.",
+          "options": [
+            {
+              "response": "An interview?"
+            },
+            {
+              "response": "You're going to be on TV?"
+            }
+          ]
+        },
+        {
+          "dialogue": "Yukiko: W-Was I scary?",
+          "options": [
+            {
+              "response": "Yeah you were."
+            },
+            {
+              "response": "You were cool.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "You should've said more.",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 8,
+      "points": 8,
+      "choices": [
+        {
+          "dialogue": "Yukiko: Are you going to wish for something, [Main Character]-kun?",
+          "options": [
+            {
+              "response": "For everyone...",
+              "with": "3",
+              "without": "?"
+            },
+            {
+              "response": "For me.",
+              "with": "3",
+              "without": "?"
+            },
+            {
+              "response": "For you...",
+              "with": "3",
+              "without": "?"
+            },
+            {
+              "response": "It's a secret."
+            }
+          ]
+        },
+        {
+          "dialogue": "Yukiko: I-is it okay... for me to ask...?",
+          "special": "Options denoted with an L lead to the Lover's Relationship",
+          "options": [
+            {
+              "response": "You're my classmate."
+            },
+            {
+              "response": "You're my friend'."
+            },
+            {
+              "response": "I really like you.",
+              "with": "L",
+              "without": "L"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 9,
+      "points": 8,
+      "results": "Learns Evade Ice",
+      "choices": [
+        {
+          "dialogue": "Yukiko: Umm, sorry... I don't know what to talk about...",
+          "lovers": true,
+          "options": [
+            {
+              "response": "The futon good with you?"
+            },
+            {
+              "response": "The sofa good with you?"
+            },
+            {
+              "response": "The floor good with you?"
+            }
+          ]
+        },
+        {
+          "dialogue": "Yukiko: That's why... I'm going to stay here. By my own will.",
+          "lovers": true,
+          "options": [
+            {
+              "response": "That's good."
+            },
+            {
+              "response": "Did you think it over?"
+            },
+            {
+              "response": "Good luck."
+            }
+          ]
+        },
+        {
+          "dialogue": "Yukiko: It's a charm from that shrine... To protect you.",
+          "lovers": true,
+          "options": [
+            {
+              "response": "Thank you."
+            },
+            {
+              "response": "You'll protect me."
+            }
+          ]
+        },
+        {
+          "dialogue": "Yukiko: That's why... I'm going to stay here. By my own will.",
+          "options": [
+            {
+              "response": "That's good."
+            },
+            {
+              "response": "Did you think it over?"
+            },
+            {
+              "response": "Good luck."
+            }
+          ]
+        },
+        {
+          "dialogue": "Yukiko: It's a charm from that shrine... To protect you.",
+          "options": [
+            {
+              "response": "Thank you."
+            },
+            {
+              "response": "Relying on the gods?"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
