@@ -12,7 +12,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.valentech.p4gguide.fragment.HomeFragment;
+import com.valentech.p4gguide.fragment.LastLinkFragment;
 import com.valentech.p4gguide.fragment.SocialLinkFragment;
+import com.valentech.p4gguide.util.ResourceUtility;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -34,7 +36,8 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         if(savedInstanceState == null) {
-            switchContentFragment(R.id.nav_home);
+            FragmentManager fragmentManager = getFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.content_frame, new HomeFragment()).commit();
         }
     }
 

@@ -65,10 +65,10 @@
       "points": 3,
       "choices": [
         {
-          "dialogue": "Chie: But me, I totally lose it. Kinda funny, huh?",
+          "dialogue": "Chie: But me, I totally lose it...\nKinda funny, huh?",
           "options": [
             {
-              "response": "It's cute (Requires LV 3 Courage)",
+              "response": "It's cute. (Requires LV 3 Courage)",
               "with": "3",
               "without": "3"
             },

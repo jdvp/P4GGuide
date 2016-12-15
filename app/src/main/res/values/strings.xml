@@ -20,6 +20,7 @@
     <string name="not_available">N/A</string>
     <string name="lovers_relationship">Lovers Relationship Choices</string>
     <string name="friends_relationship">Friends Relationship Choices</string>
+    <string name="logo_cd">Persona 4 Golden Logo</string>
 
     <string-array name="social_link_name_list">
         <item>Fool</item>

@@ -201,6 +201,7 @@ public class IndividualSocialLinkFragment extends Fragment {
         //set title and image
         ImageView image = (ImageView) view.findViewById(R.id.link_header_card_image);
         image.setImageDrawable(getResources().getDrawable(getSocialLinkImgId(getActivity(), name)));
+        image.setLayoutParams(new LinearLayout.LayoutParams(getWidth(), getHeight()));
         TextView itemName = (TextView) view.findViewById(R.id.link_header_card_name);
         itemName.setText(socialLink.getTitle());
 
@@ -250,6 +251,15 @@ public class IndividualSocialLinkFragment extends Fragment {
             notesTextView.setVisibility(View.GONE);
         }
         layout.addView(view);
+    }
+
+    private int getWidth() {
+        int sideMargins = getPixelsFromDP(16) * 2;
+        return (Resources.getSystem().getDisplayMetrics().widthPixels - (sideMargins ))/ 2;
+    }
+
+    private int getHeight() {
+        return Double.valueOf((900.0 / 750.0) * getWidth()).intValue();
     }
 
     private ArrayList<CalendarItem> getCalendarItems(SocialLink socialLink) {

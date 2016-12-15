@@ -17,6 +17,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.valentech.p4gguide.R;
+import com.valentech.p4gguide.util.ResourceUtility;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -66,6 +67,7 @@ public class SocialLinkFragment extends Fragment {
             TextView itemName = (TextView) convertView.findViewById(R.id.social_link_item_name);
             itemName.setText(item);
 
+            image.setLayoutParams(new LinearLayout.LayoutParams(getWidth(), getHeight()));
             convertView.setLayoutParams(new GridView.LayoutParams(getWidth(), GridView.AUTO_FIT));
             convertView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -75,6 +77,8 @@ public class SocialLinkFragment extends Fragment {
                     IndividualSocialLinkFragment newFragment = new IndividualSocialLinkFragment();
                     newFragment.setArguments(args);
 
+                    ResourceUtility.savePreference(getActivity(),
+                            ResourceUtility.PREFERENCE_LAST_SOCIAL_LINK, getItem(position));
                     FragmentManager fragmentManager = getFragmentManager();
                     fragmentManager.beginTransaction().replace(R.id.content_frame, newFragment).
                             addToBackStack("social link individual").commit();
@@ -87,6 +91,10 @@ public class SocialLinkFragment extends Fragment {
             int sideMargins = getPixelsFromDP(16) * 2;
             int gridSpacing = getPixelsFromDP(8) * 2;
             return (Resources.getSystem().getDisplayMetrics().widthPixels - (sideMargins + gridSpacing))/ 3;
+        }
+
+        private int getHeight() {
+            return Double.valueOf((900.0 / 750.0) * getWidth()).intValue();
         }
     }
 }
