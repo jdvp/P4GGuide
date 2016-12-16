@@ -1,0 +1,357 @@
+{
+  "title": "Emperor Arcana : Kanji Tatsumi",
+  "availability": {
+    "monday": false,
+    "tuesday": false,
+    "wednesday": true,
+    "thursday": true,
+    "friday": false,
+    "saturday": true,
+    "sunday": true,
+    "rain": false,
+    "activation": "Starting from June 9th, go to the school, on Learning Building 2F, there's a female student located near the middle Staircase. She'll mention about Kanji Threatening people. After you have spoken to her. Go find Kanji at Practice Building 1F. Speak to him and pick the first choice \"Yes I do.\" to activate the Social Link.",
+    "last": "November 27\n(Even though Nov 27 is the last day you can still raise the Social Link by hanging out on Sundays)",
+    "location": {
+      "weekdays": "Practice Building 1F",
+      "sundays": "Shopping District, North"
+    }
+  },
+  "notes": "Max Social Link Item is the Cute Strap which allows you to fuse Rokuten Maoh and Odin.",
+  "rank": [
+    {
+      "level": 1,
+      "points": 0,
+      "results": "Learns Dizzy Boost",
+      "choices": [
+        {
+          "dialogue": "Kanji: She's always apologizing for me. She's been sprouting more and more white hairs...",
+          "options": [
+            {
+              "response": "Apologize to her.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "You just need to change.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "That's what kids do.",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "points": 2,
+      "choices": [
+        {
+          "dialogue": "Kanji: ... ...",
+          "options": [
+            {
+              "response": "Get ahold of yourself."
+            },
+            {
+              "response": "Let's hurry."
+            },
+            {
+              "response": "What happened?"
+            }
+          ]
+        },
+        {
+          "dialogue": "Kanji: Sorry. Looks like it was no big deal...",
+          "options": [
+            {
+              "response": "That's good."
+            },
+            {
+              "response": "I don't blame you"
+            },
+            {
+              "response": "You wuss"
+            }
+          ]
+        },
+        {
+          "dialogue": "Kanji's Mother: He's always had trouble getting along with people. He didn't have any friends like you before.",
+          "options": [
+            {
+              "response": "Because of his hobbie?"
+            },
+            {
+              "response": "Because of his looks?"
+            },
+            {
+              "response": "Because of his attitude?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "points": 2,
+      "results": "Learns Masukunda",
+      "choices": [
+        {
+          "dialogue": "Kanji: Ughh... When you met Ma at the Hospital... She say anything about me?",
+          "options": [
+            {
+              "response": "Plenty.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Nothing in particular.",
+              "with": "2",
+              "without": "2"
+            },
+            {
+              "response": "I forget"
+            }
+          ]
+        },
+        {
+          "dialogue": "Kanji: Oh, uhh... I'm gonna go now.",
+          "options": [
+            {
+              "response": "Violence isn't the answer.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "I'll go with you.",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        },
+        {
+          "dialogue": "Kanji: Oh... Anyways, sorry 'bout dragging you into this...",
+          "options": [
+            {
+              "response": "Too bad that you didn't find it."
+            },
+            {
+              "response": "That was boring."
+            },
+            {
+              "response": "You're giving him a new one?",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "points": 4,
+      "choices": [
+        {
+          "dialogue": "Kanji: Er...",
+          "options": [
+            {
+              "response": "Just tell him the truth."
+            },
+            {
+              "response": "This old man here made it."
+            }
+          ]
+        },
+        {
+          "dialogue": "Kanji: Hah, he said I'm cool...",
+          "options": [
+            {
+              "response": "It was pretty amazing.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Don't get cocky.",
+              "with": "2",
+              "without": "?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "points": 6,
+      "results": "Learns Power Charge",
+      "choices": [
+        {
+          "dialogue": "Kanji: Strange situation I got myself into, ain't it?",
+          "options": [
+            {
+              "response": "It's good for you."
+            },
+            {
+              "response": "You're not happy?"
+            },
+            {
+              "response": "Looks like a pain..."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "points": 4,
+      "choices": [
+        {
+          "dialogue": "Kanji: That okay with you \"big bro\"?",
+          "options": [
+            {
+              "response": "Don't call me bro.",
+              "with": "3",
+              "without": "?"
+            },
+            {
+              "response": "Yeah go ahead.",
+              "with": "3",
+              "without": "?"
+            },
+            {
+              "response": "I want to learn too.",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        },
+        {
+          "dialogue": "Kanji: There's something else I gotta confront too, ain't there?",
+          "options": [
+            {
+              "response": "Your weak heart."
+            },
+            {
+              "response": "Your past."
+            },
+            {
+              "response": "I'm drawing a blank."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "points": 5,
+      "results": "Learns Regenerate 3",
+      "choices": [
+        {
+          "dialogue": "Police Officer: ... Come with me.",
+          "options": [
+            {
+              "response": "On what charges?"
+            },
+            {
+              "response": "Kanji didn't do anything.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "You got a warrant?",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        },
+        {
+          "dialogue": "Police Officer: Hmph, so you admit it. Not a shread of remorse, either.",
+          "options": [
+            {
+              "response": "It's a misunderstanding."
+            },
+            {
+              "response": "He was just being nice."
+            }
+          ]
+        },
+        {
+          "dialogue": "Police Officer: What a load of... There's no way you're getting me to believe that",
+          "options": [
+            {
+              "response": "Believe it!",
+              "with": "3",
+              "without": "?"
+            },
+            {
+              "response": "The truth is the truth.",
+              "with": "2",
+              "without": "?"
+            },
+            {
+              "response": "Tell him, Kanji.",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 8,
+      "points": 6,
+      "choices": [
+        {
+          "dialogue": "Kanji: Its the first time I went on my own... Well, I had a lot to tell him.",
+          "options": [
+            {
+              "response": "Tell him?",
+              "with": "2",
+              "without": "2"
+            },
+            {
+              "response": "Why didn't you go before?",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "How was it?",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        },
+        {
+          "dialogue": "Kanji: As long as there's someone like that snot-nosed kid to accept me, I ain't afraid of nothing!",
+          "options": [
+            {
+              "response": "Good for you.",
+              "with": "2",
+              "without": "3"
+            },
+            {
+              "response": "Find more of them.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "Your own self?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 9,
+      "points": 6,
+      "results": "Learns Evade Wind",
+      "choices": [
+        {
+          "dialogue": "No choices available when ranking Kanji from 9 to 10.",
+          "options": null
+        }
+      ]
+    }
+  ]
+}

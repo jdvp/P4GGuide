@@ -2,6 +2,7 @@ package com.valentech.p4gguide;
 
 import android.app.FragmentManager;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -12,9 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.valentech.p4gguide.fragment.HomeFragment;
-import com.valentech.p4gguide.fragment.LastLinkFragment;
-import com.valentech.p4gguide.fragment.SocialLinkFragment;
-import com.valentech.p4gguide.util.ResourceUtility;
+import com.valentech.p4gguide.fragment.SocialLinkListFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -74,7 +73,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
         switchContentFragment(id);
@@ -88,7 +87,7 @@ public class MainActivity extends AppCompatActivity
         FragmentManager fragmentManager = getFragmentManager();
         switch (id) {
             case R.id.nav_social_links:
-                fragmentManager.beginTransaction().replace(R.id.content_frame, new SocialLinkFragment()).
+                fragmentManager.beginTransaction().replace(R.id.content_frame, new SocialLinkListFragment()).
                         addToBackStack("social links").commit();
                 break;
             case R.id.nav_home:

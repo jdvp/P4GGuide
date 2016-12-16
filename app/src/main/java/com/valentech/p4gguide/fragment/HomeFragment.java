@@ -14,9 +14,11 @@ import com.valentech.p4gguide.R;
 import com.valentech.p4gguide.util.ResourceUtility;
 
 /**
+ * Fragment that displays the default main screen to the user.
+ *
+ * Contains sub-fragments depending on whether or not the user has any recently visited pages
  * Created by JD on 12/11/2016.
  */
-
 public class HomeFragment extends Fragment {
 
     View myView;
@@ -26,9 +28,14 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         myView = inflater.inflate(R.layout.home_layout, container, false);
 
-        if(ResourceUtility.getPreference(getActivity(), ResourceUtility.PREFERENCE_LAST_SOCIAL_LINK) != null) {
+        String storedLinkPreference = ResourceUtility.getPreference(getActivity(), ResourceUtility.PREFERENCE_LAST_SOCIAL_LINK);
+        if(storedLinkPreference != null && !storedLinkPreference.equals("")) {
+            Bundle args = new Bundle();
+            args.putSerializable("link", storedLinkPreference);
+
             FragmentManager fragmentManager = getFragmentManager();
             LastLinkFragment fragment = new LastLinkFragment();
+            fragment.setArguments(args);
             fragmentManager.beginTransaction().add(R.id.home_container, fragment).commit();
         }
         return myView;

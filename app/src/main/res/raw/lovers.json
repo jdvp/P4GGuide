@@ -1,0 +1,385 @@
+{
+  "title": "Lovers Arcana : Rise Kujikawa",
+  "availability": {
+    "monday": false,
+    "tuesday": false,
+    "wednesday": false,
+    "thursday": false,
+    "friday": true,
+    "saturday": true,
+    "sunday": true,
+    "rain": false,
+    "activation": "Automatic on July 23rd",
+    "last": "November 27\n(Even though Nov 27 is the last day you can still raise the Social Link by hanging out on Sundays)",
+    "location": {
+      "weekdays": "Classroom Building 1F",
+      "sundays": "Shopping District, South"
+    }
+  },
+  "notes": "Max Social Link Item is the Signed Photo which allows you to fuse Kanzeon and Ishtar.",
+  "rank": [
+    {
+      "level": 1,
+      "points": 0,
+      "choices": [
+        {
+          "dialogue": "Rise: But it's a little embarrassing to show up alone, you know?",
+          "options": [
+            {
+              "response": "Why?",
+              "with": "2",
+              "without": "?"
+            },
+            {
+              "response": "So you don't eat out?",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "Just order takeout.",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "points": 2,
+      "results": "Learns Treasure Radar",
+      "choices": [
+        {
+          "dialogue": "Rise: It'll take time to get back, so let's walk around quick!",
+          "options": [
+            {
+              "response": "You come here often?",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Can't you shop in Inaba?",
+              "with": "3",
+              "without": "?"
+            },
+            {
+              "response": "What are you looking for?",
+              "with": "3",
+              "without": "?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "points": 4,
+      "choices": [
+        {
+          "dialogue": "Rise is worried...",
+          "options": [
+            {
+              "response": "Yell."
+            },
+            {
+              "response": "Call the police.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "Grab her hand and run.",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        },
+        {
+          "dialogue": "Rise looks desperate...",
+          "options": [
+            {
+              "response": "Go along with her.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Deny it."
+            }
+          ]
+        },
+        {
+          "dialogue": "Rise: I'm sorry...  Lying about marrying you and all...",
+          "options": [
+            {
+              "response": "I don't mind.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "Lying is wrong."
+            },
+            {
+              "response": "It...It was a lie?",
+              "with": "3",
+              "without": "?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "points": 6,
+      "choices": [
+        {
+          "dialogue": "Rise: Senpai, have you ever thought that you're pushing yourself too far, or that you were just acting...?",
+          "options": [
+            {
+              "response": "All the time.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Sometimes...",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "Not really.",
+              "with": "2",
+              "without": "?"
+            }
+          ]
+        },
+        {
+          "dialogue": "Rise: You're with me right now because i am Risette, yeah?",
+          "options": [
+            {
+              "response": "That's right."
+            },
+            {
+              "response": "No.",
+              "with": "3",
+              "without": "?"
+            },
+            {
+              "response": "I don't know.",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "points": 6,
+      "results": "Learns Enemy Radar",
+      "choices": [
+        {
+          "dialogue": "Inoue: A fan letter came, you see...",
+          "options": [
+            {
+              "response": "Give it to her yourself."
+            },
+            {
+              "response": "Does she even need them?"
+            },
+            {
+              "response": "Why so interested in her?"
+            }
+          ]
+        },
+        {
+          "dialogue": "Rise: To think i trusted him... I feel betrayed!",
+          "options": [
+            {
+              "response": "That's not nice."
+            },
+            {
+              "response": "He's worried about you"
+            },
+            {
+              "response": "You're really quitting?"
+            }
+          ]
+        },
+        {
+          "dialogue": "Rise: I gave up on being Risette. I can't meet her expectations...",
+          "options": [
+            {
+              "response": "Having second thoughts?",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "This was your decision."
+            },
+            {
+              "response": "She'll understand. (Requires LV 5 Understanding)",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        },
+        {
+          "dialogue": "Rise: Doesn't that sound fun? H-How about it? Haha...Ha...",
+          "options": [
+            {
+              "response": "Sounds great.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "If you're serious...",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "I can't deccide that now."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "points": 6,
+      "choices": [
+        {
+          "dialogue": "Rise: ... She was cute, so i figured she would sell.",
+          "options": [
+            {
+              "response": "She's cute, huh?"
+            },
+            {
+              "response": "Jealous?"
+            },
+            {
+              "response": "That's good, isn't it?"
+            }
+          ]
+        },
+        {
+          "dialogue": "Rise: You like having such a cute underclassman, right? I'm an ex-idol, after all.",
+          "options": [
+            {
+              "response": "I'm happy.",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "I'm miserable."
+            },
+            {
+              "response": "That part doesn't matter.",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        },
+        {
+          "dialogue": "Rise looks helpless...",
+          "options": [
+            {
+              "response": "Cheer her up.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "Move closer to her.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Laugh it off. (Requires LV 5 Courage)",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "points": 8,
+      "choices": [
+        {
+          "dialogue": "Rise: Senpai... I... I don't know why I'm crying...",
+          "options": [
+            {
+              "response": "You mustn't cry!"
+            },
+            {
+              "response": "Cry all you want."
+            }
+          ]
+        },
+        {
+          "dialogue": "...You sense this is an important moment. There's no turning back.",
+          "special": "Options denoted with an L lead to the Lover's Relationship",
+          "options": [
+            {
+              "response": "Hold her.",
+              "with": "L",
+              "without": "L"
+            },
+            {
+              "response": "Stand there."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 8,
+      "points": 6,
+      "choices": [
+        {
+          "dialogue": "Rise: And yet... I felt so angry about it... Why do you think that is?",
+          "options": [
+            {
+              "response": "You regret leaving.",
+              "with": "3",
+              "without": "?"
+            },
+            {
+              "response": "You're selfish.",
+              "with": "3",
+              "without": "?"
+            },
+            {
+              "response": "Risette is Rise, too.",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 9,
+      "points": 9,
+      "results": "Learns Weakness Scan",
+      "choices": [{
+          "dialogue": "Rise: I'll ask the man himself! So-where do you hide them!?",
+          "lovers": true,
+          "options": [
+            {
+              "response": "What do you mean?"
+            },
+            {
+              "response": "You want to see?"
+            },
+            {
+              "response": "I don't have any."
+            }
+          ]
+        },
+        {
+          "dialogue": "No choices available when ranking Rise from 9 to 10 in the friends relationship.",
+          "options": null
+        }
+      ]
+    }
+  ]
+}
