@@ -7,6 +7,8 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.content.res.ResourcesCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,12 +35,10 @@ import static com.valentech.p4gguide.util.ResourceUtility.getSocialLinkImgId;
  */
 public class SocialLinkListFragment extends Fragment {
 
-    View myView;
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        myView = inflater.inflate(R.layout.social_link_layout, container, false);
+        View myView = inflater.inflate(R.layout.social_link_layout, container, false);
 
         GridView socialLinkGrid = (GridView) myView.findViewById(R.id.social_link_grid);
         List<String> items = Arrays.asList(getResources().getStringArray(R.array.social_link_name_list));
@@ -51,7 +51,7 @@ public class SocialLinkListFragment extends Fragment {
 
     private class SocialLinkItemAdapter extends ArrayAdapter<String> {
 
-        private LayoutInflater inflater;
+        private final LayoutInflater inflater;
 
         SocialLinkItemAdapter(Context context, int resource, ArrayList<String> socialLinkItems) {
             super(context, resource, socialLinkItems);
@@ -61,11 +61,13 @@ public class SocialLinkListFragment extends Fragment {
         @Override
         @NonNull
         public View getView(final int position, View convertView, @NonNull ViewGroup parent) {
-            convertView = inflater.inflate(R.layout.social_link_item, null);
+            if(convertView == null) {
+                convertView = inflater.inflate(R.layout.social_link_item, parent, false);
+            }
             final String item = getItem(position);
             ImageView image = (ImageView) convertView.findViewById(R.id.social_link_item_image);
 
-            image.setImageDrawable(getResources().getDrawable(getSocialLinkImgId(getActivity(), item)));
+            image.setImageDrawable(ResourcesCompat.getDrawable(getResources(), getSocialLinkImgId(getActivity(), item), null));
             TextView itemName = (TextView) convertView.findViewById(R.id.social_link_item_name);
             itemName.setText(item);
 

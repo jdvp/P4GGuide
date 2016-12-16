@@ -22,13 +22,10 @@ import static com.valentech.p4gguide.util.ResourceUtility.getPixelsFromDP;
  */
 
 public class LastLinkFragment extends Fragment {
-
-    View myView;
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        myView = inflater.inflate(R.layout.last_link_layout, container, false);
+        View myView = inflater.inflate(R.layout.last_link_layout, container, false);
         View tv = myView.findViewById(R.id.link_tv);
         tv.setLayoutParams(new FrameLayout.LayoutParams(getSize(), getSize()));
         tv.setOnClickListener(new View.OnClickListener() {

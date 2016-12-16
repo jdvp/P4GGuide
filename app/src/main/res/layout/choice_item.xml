@@ -8,8 +8,8 @@
     android:paddingRight="16dp"
     android:paddingTop="8dp"
     android:paddingBottom="8dp"
-    android:layout_gravity="left"
-    android:gravity="left">
+    android:layout_gravity="start"
+    android:gravity="start">
 
     <TextView
         android:id="@+id/dialogue"

@@ -1,5 +1,6 @@
 package com.valentech.p4gguide;
 
+import android.app.Fragment;
 import android.app.FragmentManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
+        drawer.addDrawerListener(toggle);
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
@@ -87,7 +88,11 @@ public class MainActivity extends AppCompatActivity
         FragmentManager fragmentManager = getFragmentManager();
         switch (id) {
             case R.id.nav_social_links:
-                fragmentManager.beginTransaction().replace(R.id.content_frame, new SocialLinkListFragment()).
+                Fragment fragment = fragmentManager.findFragmentByTag("social link fragment");
+                if(fragment == null) {
+                    fragment = new SocialLinkListFragment();
+                }
+                fragmentManager.beginTransaction().replace(R.id.content_frame, fragment, "social link fragment").
                         addToBackStack("social links").commit();
                 break;
             case R.id.nav_home:

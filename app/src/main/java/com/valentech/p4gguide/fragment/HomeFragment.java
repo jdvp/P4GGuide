@@ -7,8 +7,6 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 
 import com.valentech.p4gguide.R;
 import com.valentech.p4gguide.util.ResourceUtility;
@@ -20,13 +18,10 @@ import com.valentech.p4gguide.util.ResourceUtility;
  * Created by JD on 12/11/2016.
  */
 public class HomeFragment extends Fragment {
-
-    View myView;
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        myView = inflater.inflate(R.layout.home_layout, container, false);
+        View homeView = inflater.inflate(R.layout.home_layout, container, false);
 
         String storedLinkPreference = ResourceUtility.getPreference(getActivity(), ResourceUtility.PREFERENCE_LAST_SOCIAL_LINK);
         if(storedLinkPreference != null && !storedLinkPreference.equals("")) {
@@ -38,7 +33,7 @@ public class HomeFragment extends Fragment {
             fragment.setArguments(args);
             fragmentManager.beginTransaction().add(R.id.home_container, fragment).commit();
         }
-        return myView;
+        return homeView;
     }
 }
 

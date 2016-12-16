@@ -3,7 +3,6 @@ package com.valentech.p4gguide.fragment;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.res.Resources;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -49,13 +48,12 @@ import static com.valentech.p4gguide.util.ResourceUtility.getSocialLinkImgId;
  */
 public class SocialLinkFragment extends Fragment {
 
-    View myView;
-    String name = "";
+    private String name = "";
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        myView = inflater.inflate(R.layout.individual_social_link_layout, container, false);
+        View myView = inflater.inflate(R.layout.individual_social_link_layout, container, false);
         LinearLayout layout = (LinearLayout) myView.findViewById(R.id.individual_social_link_container);
 
         name = getArguments().getString("link", "");
@@ -303,7 +301,7 @@ public class SocialLinkFragment extends Fragment {
 
     private class CalendarAdapter extends ArrayAdapter<CalendarItem> {
 
-        private LayoutInflater inflater;
+        private final LayoutInflater inflater;
 
         CalendarAdapter(Context context, int resource, ArrayList<CalendarItem> socialLinkItems) {
             super(context, resource, socialLinkItems);
@@ -313,7 +311,9 @@ public class SocialLinkFragment extends Fragment {
         @Override
         @NonNull
         public View getView(final int position, View convertView, @NonNull ViewGroup parent) {
-            convertView = inflater.inflate(R.layout.generic_grid_item, null);
+            if(convertView == null) {
+                convertView = inflater.inflate(R.layout.generic_grid_item, parent, false);
+            }
             final CalendarItem item = getItem(position);
             RelativeLayout container = (RelativeLayout) convertView.findViewById(R.id.grid_item_container);
 
@@ -356,7 +356,7 @@ public class SocialLinkFragment extends Fragment {
 
     private class GenericGridTextAdapter extends ArrayAdapter<String> {
 
-        private LayoutInflater inflater;
+        private final LayoutInflater inflater;
         private boolean isTwoLines = false;
 
         GenericGridTextAdapter(Context context, int resource, ArrayList<String> socialLinkItems) {
@@ -373,7 +373,10 @@ public class SocialLinkFragment extends Fragment {
         @Override
         @NonNull
         public View getView(final int position, View convertView, @NonNull ViewGroup parent) {
-            convertView = inflater.inflate(R.layout.generic_grid_item, null);
+            if(convertView == null) {
+                convertView = inflater.inflate(R.layout.generic_grid_item, parent, false);
+            }
+
             final String item = getItem(position);
             RelativeLayout container = (RelativeLayout) convertView.findViewById(R.id.grid_item_container);
 

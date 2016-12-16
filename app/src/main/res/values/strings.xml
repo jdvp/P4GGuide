@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">P4G Guide</string>
 
+    <string name="nav_home">Home</string>
+    <string name="nav_social">Social Links</string>
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 

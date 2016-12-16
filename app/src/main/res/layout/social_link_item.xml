@@ -17,7 +17,8 @@
             android:id="@+id/social_link_item_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"/>
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/social_link_image_cd"/>
 
         <TextView
             android:id="@+id/social_link_item_name"

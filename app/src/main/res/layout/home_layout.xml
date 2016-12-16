@@ -16,7 +16,6 @@
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/logo"
             android:id="@+id/logo"
-            android:layout_centerHorizontal="true"
             android:contentDescription="@string/logo_cd"/>
     </LinearLayout>
 </ScrollView>
