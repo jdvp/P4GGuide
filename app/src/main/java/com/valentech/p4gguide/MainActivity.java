@@ -13,6 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.valentech.p4gguide.fragment.DayFragment;
 import com.valentech.p4gguide.fragment.HomeFragment;
 import com.valentech.p4gguide.fragment.SocialLinkListFragment;
 
@@ -86,14 +87,23 @@ public class MainActivity extends AppCompatActivity
 
     private void switchContentFragment(int id) {
         FragmentManager fragmentManager = getFragmentManager();
+        Fragment fragment = null;
         switch (id) {
             case R.id.nav_social_links:
-                Fragment fragment = fragmentManager.findFragmentByTag("social link fragment");
+                fragment = fragmentManager.findFragmentByTag("social link fragment");
                 if(fragment == null) {
                     fragment = new SocialLinkListFragment();
                 }
                 fragmentManager.beginTransaction().replace(R.id.content_frame, fragment, "social link fragment").
                         addToBackStack("social links").commit();
+                break;
+            case R.id.nav_walkthrough:
+                fragment = fragmentManager.findFragmentByTag("walkthrough fragment");
+                if(fragment == null) {
+                    fragment = new DayFragment();
+                }
+                fragmentManager.beginTransaction().replace(R.id.content_frame, fragment, "walkthrough fragment").
+                        addToBackStack("walkthrough").commit();
                 break;
             case R.id.nav_home:
             default:

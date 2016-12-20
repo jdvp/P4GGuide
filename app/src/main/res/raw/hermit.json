@@ -1,0 +1,7 @@
+{
+	"title" : "Hermit Arcana : Fox",
+	"availability" : {
+		"activation" : "Automatic on May 5th. Available every day at the Shrine in the Shopping district."
+	},
+	"notes" : "This arcana levels up every time you finish an Ema Request. For maxing out this social link, the Gratitude Ema item, which allows you to fuse Ongyo-ki, is unlocked.\n\n\nRank Events:\nRank 1: Cleared Quest  7\nRank 2: Cleared Quest  8\nRank 3: Cleared Quest  9\nRank 4: Cleared Quest 10\nRank 5: Cleared Quest 11\nRank 6: Cleared Quest 12\nRank 7: Cleared Quest 13\nRank 8: Cleared Quest 14\nRank 9: Cleared Quest 15\n\n\nFox Recovery Calculator: In P4G, characters no longer get tired. However, your HP doesn't fully recover unless you go home and rest. Starting May 5th you can ask Fox for healing. Note that it is really expensive.\nRecovery cost per SP is as follows:\n\nCost per SP = 60 - [(Rank Level - 0) x 5]\n\nExample, let's say our entire party is missing 300 SP and your Social Link level with Hermit is at Lv 1 it'll cost you 300 X [60 - [(1-1) x 5] = 300 x 60 = 18000 Yen to get a full recovery from Fox. But say its at at Lv 9 the total is reduced to 6000 Yen (300 x [60 - [(9-1) x 5]] = 300 x 20 = 6000 Yen)."
+}

@@ -357,17 +357,10 @@ public class SocialLinkFragment extends Fragment {
     private class GenericGridTextAdapter extends ArrayAdapter<String> {
 
         private final LayoutInflater inflater;
-        private boolean isTwoLines = false;
 
         GenericGridTextAdapter(Context context, int resource, ArrayList<String> socialLinkItems) {
             super(context, resource, socialLinkItems);
             inflater = LayoutInflater.from(context);
-        }
-
-        GenericGridTextAdapter(Context context, int resource, ArrayList<String> socialLinkItems, boolean isTwoLines) {
-            super(context, resource, socialLinkItems);
-            inflater = LayoutInflater.from(context);
-            this.isTwoLines = isTwoLines;
         }
 
         @Override
@@ -385,13 +378,6 @@ public class SocialLinkFragment extends Fragment {
                 textView.setText(item);
                 textView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
                 container.addView(textView);
-
-                if(isTwoLines) {
-                    textView.setLines(2);
-                    if(position % 3 == 0) {
-                        container.setGravity(Gravity.START);
-                    }
-                }
             }
 
             container.setOnClickListener(null);

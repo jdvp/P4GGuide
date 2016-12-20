@@ -61,9 +61,7 @@ public class SocialLinkListFragment extends Fragment {
         @Override
         @NonNull
         public View getView(final int position, View convertView, @NonNull ViewGroup parent) {
-            if(convertView == null) {
-                convertView = inflater.inflate(R.layout.social_link_item, parent, false);
-            }
+            convertView = inflater.inflate(R.layout.social_link_item, parent, false);
             final String item = getItem(position);
             ImageView image = (ImageView) convertView.findViewById(R.id.social_link_item_image);
 
