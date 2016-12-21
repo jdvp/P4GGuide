@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity
 
     private void switchContentFragment(int id) {
         FragmentManager fragmentManager = getFragmentManager();
-        Fragment fragment = null;
+        Fragment fragment;
         switch (id) {
             case R.id.nav_social_links:
                 fragment = fragmentManager.findFragmentByTag("social link fragment");

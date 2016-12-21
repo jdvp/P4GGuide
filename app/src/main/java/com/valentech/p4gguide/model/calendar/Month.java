@@ -1,8 +1,11 @@
 package com.valentech.p4gguide.model.calendar;
 
+import android.util.SparseArray;
+
 import java.util.HashMap;
 
 /**
+ * Contains the information necessary to recreate the in-game day mapping
  * Created by JD on 12/18/2016.
  */
 
@@ -20,12 +23,13 @@ public enum Month{
     FEBRUARY(14, 1, 16),
     MARCH(15, 20, 20);
 
-    private static HashMap<Integer, Month> numToMonth;
+    private static final SparseArray<Month> numToMonth = new SparseArray<>();
+    private static final HashMap<String, Month> stringToMonth = new HashMap<>();
     private final int number;
     private final int start;
     private final int end;
 
-    public int getNumber() {
+    private int getNumber() {
         return number;
     }
 
@@ -40,6 +44,7 @@ public enum Month{
     static {
         for(Month month : Month.values()){
             numToMonth.put(month.getNumber(), month);
+            stringToMonth.put(month.toString(), month);
         }
     }
     Month(int number, int start, int end) {
@@ -59,6 +64,24 @@ public enum Month{
             dayNum = dayNum + 1;
             return new Day(month, dayNum);
         }
-        return null;
+        return day;
+    }
+
+    public static Day getPreviousDay(Day day) {
+        Month month = day.getMonth();
+        int dayNum = day.getDay();
+        if(dayNum == month.getStart() && month != APRIL) {
+            month = numToMonth.get(month.getNumber() - 1);
+            dayNum = month.getEnd();
+            return new Day(month, dayNum);
+        } else if(dayNum != month.getStart()) {
+            dayNum = dayNum - 1;
+            return new Day(month, dayNum);
+        }
+        return day;
+    }
+
+    public static Month getMonth(String month) {
+        return stringToMonth.get(month.toUpperCase().trim());
     }
 }

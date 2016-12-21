@@ -3,6 +3,8 @@ package com.valentech.p4gguide.util;
 import android.os.AsyncTask;
 
 /**
+ * An abstract async task that allows you to pass in Runnables
+ *
  * Created by JD on 12/16/2016.
  */
 

@@ -3,6 +3,7 @@ package com.valentech.p4gguide.model.social_link;
 import java.util.ArrayList;
 
 /**
+ * Information pertaining to one social link character in the P4G game
  * Created by JD on 12/11/2016.
  */
 

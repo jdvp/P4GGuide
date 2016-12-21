@@ -1,9 +1,9 @@
 package com.valentech.p4gguide.model.social_link;
 
 /**
+ * A single option available to a user when replying in a social-link ranking episode
  * Created by JD on 12/11/2016.
  */
-
 public class Option {
     private String response;
     private String with;

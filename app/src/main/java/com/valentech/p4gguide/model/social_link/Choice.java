@@ -3,6 +3,8 @@ package com.valentech.p4gguide.model.social_link;
 import java.util.ArrayList;
 
 /**
+ * A single dialogue with options given by a social link character when ranking up
+ *
  * Created by JD on 12/11/2016.
  */
 

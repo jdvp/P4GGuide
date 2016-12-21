@@ -26,7 +26,7 @@ public class HomeFragment extends Fragment {
         String storedLinkPreference = ResourceUtility.getPreference(getActivity(), ResourceUtility.PREFERENCE_LAST_SOCIAL_LINK);
         if(storedLinkPreference != null && !storedLinkPreference.equals("")) {
             Bundle args = new Bundle();
-            args.putSerializable("link", storedLinkPreference);
+            args.putString("link", storedLinkPreference);
 
             FragmentManager fragmentManager = getFragmentManager();
             LastLinkFragment fragment = new LastLinkFragment();

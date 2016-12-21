@@ -29,6 +29,8 @@
     <string name="pick_up_social">Social Link : %1$s</string>
     <string name="last_link_cd">Image of a television set displaying a picture of the last social link visited. Double tap to go to the most recently visited social link.</string>
     <string name="social_link_image_cd">Social Link Character Image</string>
+    <string name="previous_day">Previous Day</string>
+    <string name="next_day">Next Day</string>
 
 
     <string-array name="social_link_name_list">

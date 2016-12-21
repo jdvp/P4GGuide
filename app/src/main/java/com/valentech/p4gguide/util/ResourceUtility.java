@@ -7,6 +7,7 @@ import android.preference.PreferenceManager;
 import android.util.TypedValue;
 
 /**
+ * Utility class used for various calculations that are used OFTEN
  * Created by JD on 12/11/2016.
  */
 

@@ -6,6 +6,7 @@ import android.view.MotionEvent;
 import android.widget.GridView;
 
 /**
+ * A Gridview that can be put inside of a ScrollView and work as expected (for this app)
  * Created by JD on 12/12/2016.
  */
 class ScrollGridView extends GridView {

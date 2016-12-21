@@ -3,6 +3,7 @@ package com.valentech.p4gguide.model.social_link;
 import java.util.ArrayList;
 
 /**
+ * Contains information pertaining to one individual rank for one individual social link
  * Created by JD on 12/11/2016.
  */
 

@@ -1,37 +1,35 @@
 package com.valentech.p4gguide.fragment;
 
 import android.app.Fragment;
-import android.content.res.Resources;
+import android.app.FragmentManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebChromeClient;
-import android.webkit.WebSettings;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
+import android.widget.Button;
 
 import com.valentech.p4gguide.R;
+import com.valentech.p4gguide.model.calendar.Day;
+import com.valentech.p4gguide.model.calendar.Month;
 import com.valentech.p4gguide.util.AbstractAsyncTask;
 import com.valentech.p4gguide.util.ResourceUtility;
 import com.valentech.p4gguide.util.WalkthroughWebClient;
 
 import org.jsoup.Jsoup;
-import org.jsoup.nodes.Attribute;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 
 import java.io.IOException;
-
 /**
  * Fragment that displays a walkthrough page to the user.
  *
  * Created by JD on 12/11/2016.
  */
 public class DayFragment extends Fragment {
+    private boolean pageLoaded = false;
     @Nullable
     @Override
     public View onCreateView(final LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -52,9 +50,52 @@ public class DayFragment extends Fragment {
             date = "April_11th";
         }
 
+        Button nextDay = (Button) dayView.findViewById(R.id.next_day_button);
+        if(nextDay != null) {
+            nextDay.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (!pageLoaded) {
+                        return;
+                    }
+
+                    Bundle args = new Bundle();
+                    args.putString("date", Month.getNextDay(Day.fromString(date)).toString());
+
+                    DayFragment fragment = new DayFragment();
+                    fragment.setArguments(args);
+
+                    FragmentManager fragmentManager = getFragmentManager();
+                    fragmentManager.beginTransaction().replace(R.id.content_frame, fragment, "walkthrough fragment").commit();
+                }
+            });
+        }
+
+        Button previous = (Button) dayView.findViewById(R.id.previous_day_button);
+        if(previous != null) {
+            previous.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (!pageLoaded) {
+                        return;
+                    }
+
+                    Bundle args = new Bundle();
+                    args.putString("date", Month.getPreviousDay(Day.fromString(date)).toString());
+
+                    DayFragment fragment = new DayFragment();
+                    fragment.setArguments(args);
+
+                    FragmentManager fragmentManager = getFragmentManager();
+                    fragmentManager.beginTransaction().replace(R.id.content_frame, fragment, "walkthrough fragment").commit();
+                }
+            });
+        }
+
         //if the page is cached, load it
         if(ResourceUtility.getPreference(getActivity(), date) != null) {
             view.loadDataWithBaseURL("file:///android_asset/", ResourceUtility.getPreference(getActivity(), date), "text/html", "utf-8", null);
+            pageLoaded = true;
             return dayView;
         }
 
@@ -97,6 +138,7 @@ public class DayFragment extends Fragment {
                         @Override
                         public void run() {
                             view.loadDataWithBaseURL("file:///android_asset/", html, "text/html", "utf-8", null);
+                            pageLoaded = true;
                         }
                     });
                 } catch (IOException e) {
@@ -109,7 +151,7 @@ public class DayFragment extends Fragment {
         return dayView;
     }
 
-    public static void largeLog(String tag, String content) {
+    private static void largeLog(String tag, String content) {
         if (content.length() > 4000) {
             Log.d(tag, content.substring(0, 4000));
             largeLog(tag, content.substring(4000));

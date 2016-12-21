@@ -1,6 +1,8 @@
 package com.valentech.p4gguide.model.social_link;
 
 /**
+ * When a Social Link is available for ranking
+ *
  * Created by JD on 12/11/2016.
  */
 
