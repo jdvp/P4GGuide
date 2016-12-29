@@ -6,6 +6,7 @@ import android.content.res.AssetManager;
 import android.content.res.Resources;
 import android.preference.PreferenceManager;
 import android.support.v4.content.res.ResourcesCompat;
+import android.util.Log;
 import android.util.TypedValue;
 
 import java.io.IOException;
@@ -32,17 +33,31 @@ public class ResourceUtility {
     }
 
     public static String getDayNotFoundHtml(Context context) {
+        return getGenericHtmlFromAssets(context, "day_not_found.html");
+    }
+
+
+    public static String getLoading(Context context) {
+        return getGenericHtmlFromAssets(context, "loading.html");
+    }
+
+    private static String getGenericHtmlFromAssets(Context context, String string) {
+        if(hasNullObjects(context, string)) {
+            return "";
+        }
         AssetManager manager  = context.getAssets();
         InputStream is = null;
         try {
-            is = manager.open("day_not_found.html");
+            is = manager.open(string);
             Scanner s = new Scanner(is).useDelimiter("\\A");
             return s.hasNext() ? s.next() : "";
-        } catch (IOException ignored) {} finally {
+        } catch (IOException ignored) {ignored.printStackTrace();} finally {
             if(is != null) {
                 try {
                     is.close();
-                } catch (IOException ignored) {}
+                } catch (IOException ignored) {
+                    ignored.printStackTrace();
+                }
             }
         }
         return "";
@@ -53,6 +68,9 @@ public class ResourceUtility {
     }
 
     public static void savePreference(Context context, String key, String value) {
+        if(hasNullObjects(context, key, value)) {
+            return;
+        }
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
         SharedPreferences.Editor preferenceEditor = preferences.edit();
         preferenceEditor.putString(key, value);
@@ -60,7 +78,22 @@ public class ResourceUtility {
     }
 
     public static String getPreference(Context context, String key) {
+        if(hasNullObjects(context, key)) {
+            return null;
+        }
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
         return preferences.getString(key, null);
+    }
+
+    private static boolean hasNullObjects(Object ... objects) {
+        if(objects == null){
+            return true;
+        }
+        for (Object object : objects) {
+            if (object == null){
+                return true;
+            }
+        }
+        return false;
     }
 }

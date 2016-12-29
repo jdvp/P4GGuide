@@ -42,6 +42,8 @@ public class DayFragment extends Fragment {
                 super.onPageFinished(view, url);
             }
         });
+        largeLog("loading is", ResourceUtility.getLoading(getActivity()));
+        view.loadDataWithBaseURL("file:///android_asset/", ResourceUtility.getLoading(getActivity()), "text/html", "utf-8", null);
 
         final String date;
         if(getArguments() != null) {
