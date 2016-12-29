@@ -2,9 +2,15 @@ package com.valentech.p4gguide.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.res.AssetManager;
 import android.content.res.Resources;
 import android.preference.PreferenceManager;
+import android.support.v4.content.res.ResourcesCompat;
 import android.util.TypedValue;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Scanner;
 
 /**
  * Utility class used for various calculations that are used OFTEN
@@ -23,6 +29,23 @@ public class ResourceUtility {
 
     public static int getSocialLinkImgId(Context context, String name) {
         return context.getResources().getIdentifier("social_link_" + sanitizeItemName(name), "drawable", context.getPackageName());
+    }
+
+    public static String getDayNotFoundHtml(Context context) {
+        AssetManager manager  = context.getAssets();
+        InputStream is = null;
+        try {
+            is = manager.open("day_not_found.html");
+            Scanner s = new Scanner(is).useDelimiter("\\A");
+            return s.hasNext() ? s.next() : "";
+        } catch (IOException ignored) {} finally {
+            if(is != null) {
+                try {
+                    is.close();
+                } catch (IOException ignored) {}
+            }
+        }
+        return "";
     }
 
     public static int getPixelsFromDP(float dp) {

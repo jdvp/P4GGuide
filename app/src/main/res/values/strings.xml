@@ -70,6 +70,16 @@
         <item>Rain</item>
     </string-array>
 
+    <string-array name="day_abbreviations">
+        <item>S</item>
+        <item>M</item>
+        <item>T</item>
+        <item>W</item>
+        <item>T</item>
+        <item>F</item>
+        <item>S</item>
+    </string-array>
+
     <string-array name="social_link_locations">
         <item>Weekdays:</item>
         <item>Holidays &amp; Sundays:</item>

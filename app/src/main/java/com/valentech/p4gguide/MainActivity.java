@@ -14,7 +14,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.valentech.p4gguide.fragment.DayFragment;
+import com.valentech.p4gguide.fragment.DayPickerFragment;
 import com.valentech.p4gguide.fragment.HomeFragment;
+import com.valentech.p4gguide.fragment.MonthPickerFragment;
 import com.valentech.p4gguide.fragment.SocialLinkListFragment;
 
 public class MainActivity extends AppCompatActivity
@@ -98,12 +100,12 @@ public class MainActivity extends AppCompatActivity
                         addToBackStack("social links").commit();
                 break;
             case R.id.nav_walkthrough:
-                fragment = fragmentManager.findFragmentByTag("walkthrough fragment");
+                fragment = fragmentManager.findFragmentByTag("walkthrough fragment month picker");
                 if(fragment == null) {
-                    fragment = new DayFragment();
+                    fragment = new MonthPickerFragment();
                 }
-                fragmentManager.beginTransaction().replace(R.id.content_frame, fragment, "walkthrough fragment").
-                        addToBackStack("walkthrough").commit();
+                fragmentManager.beginTransaction().replace(R.id.content_frame, fragment, "walkthrough fragment month picker").
+                        addToBackStack("walkthrough picker").commit();
                 break;
             case R.id.nav_home:
             default:

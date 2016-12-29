@@ -9,7 +9,7 @@ public class Day {
     private Month month;
     private int day;
 
-    Day(Month month, int day) {
+    public Day(Month month, int day) {
         this.month = month;
         this.day = day;
     }
@@ -31,6 +31,7 @@ public class Day {
     }
 
     public static Day fromString(String dateString){
+        dateString = dateString.replaceAll(" ", "_");
         try {
             String[] parts = dateString.split("_");
             Month month = Month.getMonth(parts[0]);

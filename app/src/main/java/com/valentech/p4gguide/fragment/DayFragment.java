@@ -36,7 +36,7 @@ public class DayFragment extends Fragment {
         final View dayView = inflater.inflate(R.layout.day_layout, container, false);
 
         final WebView view = (WebView) dayView.findViewById(R.id.day_web);
-        view.setWebViewClient(new WalkthroughWebClient(){
+        view.setWebViewClient(new WalkthroughWebClient(getActivity()){
             @Override
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
@@ -107,6 +107,7 @@ public class DayFragment extends Fragment {
                     Document document = Jsoup.connect("http://m.ign.com/wikis/shin-megami-tensei-persona-4-golden/" + date).
                             userAgent("Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Mobile Safari/537.36").get();
 
+
                     Element body = document.getElementById("wiki-wrapper");
                     Element ad = body.getElementById("queen");
                     if(ad != null) {
@@ -142,6 +143,13 @@ public class DayFragment extends Fragment {
                         }
                     });
                 } catch (IOException e) {
+                    getActivity().runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            view.loadData(ResourceUtility.getDayNotFoundHtml(getActivity()), "text/html", "utf-8");
+                            pageLoaded = true;
+                        }
+                    });
                     e.printStackTrace();
                 }
             }
