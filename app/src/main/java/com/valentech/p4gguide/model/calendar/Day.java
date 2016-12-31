@@ -64,4 +64,13 @@ public class Day {
 
         return monthString + "_" + day + suffix;
     }
+
+    public boolean isAfter(Day other) {
+        if(other.getMonth().isAfter(this.getMonth())) {
+            return false;
+        } else if(other.getMonth().equals(this.getMonth()) && this.day >= other.getDay()) {
+            return true;
+        }
+        return false;
+    }
 }

@@ -84,4 +84,8 @@ public enum Month{
     public static Month getMonth(String month) {
         return stringToMonth.get(month.toUpperCase().trim());
     }
+
+    public boolean isAfter(Month other) {
+        return this.getNumber() > other.getNumber();
+    }
 }

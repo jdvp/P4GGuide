@@ -9,6 +9,12 @@ import android.support.v4.content.res.ResourcesCompat;
 import android.util.Log;
 import android.util.TypedValue;
 
+import com.valentech.p4gguide.model.calendar.Day;
+import com.valentech.p4gguide.model.calendar.Month;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Scanner;
@@ -95,5 +101,15 @@ public class ResourceUtility {
             }
         }
         return false;
+    }
+
+    static Document getWalkthroughPageForDate(String date) throws IOException {
+        Day day = Day.fromString(date);
+        if(day.isAfter(new Day(Month.JUNE, 12)) && new Day(Month.MARCH, 19).isAfter(day)) {
+            //todo add a new way of grabbing content in this period
+        }
+
+        return Jsoup.connect("http://m.ign.com/wikis/shin-megami-tensei-persona-4-golden/" + date).
+                userAgent("Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Mobile Safari/537.36").get();
     }
 }
