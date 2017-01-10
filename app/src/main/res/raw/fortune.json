@@ -1,0 +1,496 @@
+{
+  "title": "Fortune Arcana : Naoto Shirogane",
+  "availability": {
+    "monday": true,
+    "tuesday": true,
+    "wednesday": true,
+    "thursday": false,
+    "friday": false,
+    "saturday": true,
+    "sunday": true,
+    "rain": false,
+    "activation": "Starting from October 21:\n1.Talk to Naoto in the designated location for the day\n2. Go to Shopping District , North and find the man in a black (Near Aiya).\n3.  Talk to him and pick the first choice. (You must have Maxed Knowledge).\n4. Go back to the school and find Naoto\n\nNote: You must have maxed knowledge to start this social link.",
+    "last": "November 27 (However like many other links you can still progress on Sundays after this date)",
+    "location": {
+      "weekdays": "Classroom Building 1F",
+      "sundays": "Samegawa Flood Plain"
+    }
+  },
+  "notes" : "You must use everyday possible if you want to max Naoto's Social Link since there is only a month to do it. So make sure you pick all the correct choice and bring a matching Arcana.\n\nMax Social Link Item is the Detective Badge which allows you to fuse Yamato-Takeru and Norn.",
+  "rank": [
+    {
+      "level": 1,
+      "points": 0,
+      "results": "Learns Invigorate 1",
+      "choices": [
+        {
+          "dialogue": "Naoto: I'd chalk it up as a prank.",
+          "options": [
+            {
+              "response": "Really?"
+            },
+            {
+              "response": "I'm still worried about you."
+            },
+            {
+              "response": "That's no fun.",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        },
+        {
+          "dialogue": "Naoto: .....",
+          "options": [
+            {
+              "response": "What happened?"
+            },
+            {
+              "response": "You don't need to go home?"
+            },
+            {
+              "response": "A thief in a sleuth's house?"
+            }
+          ]
+        },
+        {
+          "dialogue": "Naoto: I don't know about those, but my belongings aren't of any particular value, so...",
+          "options": [
+            {
+              "response": "You should be careful.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "Who would want your stuff?"
+            },
+            {
+              "response": "Remember that card...?",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "points": 0,
+      "choices": [
+        {
+          "dialogue": "Naoto is holding a sealed letter...",
+          "options": [
+            {
+              "response": "A challenge for a duel?",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "A love letter?"
+            },
+            {
+              "response": "That card business again...?",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        },
+        {
+          "dialogue": "Naoto: How misleading... A sealed letter at a time like this...",
+          "options": [
+            {
+              "response": "You won't read it?"
+            },
+            {
+              "response": "What if it's from a guy?"
+            },
+            {
+              "response": "What'll you do with it?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "points": 3,
+      "results": "Learns Mind Charge",
+      "choices": [
+        {
+          "dialogue": "Naoto is holding a card.",
+          "options": [
+            {
+              "response": "Another love letter?"
+            },
+            {
+              "response": "Is it a guy this time?"
+            },
+            {
+              "response": "That \"card\" again?",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        },
+        {
+          "dialogue": "Naoto: I haven't the time to waste on this...",
+          "options": [
+            {
+              "response": "That's right."
+            },
+            {
+              "response": "Why so uncomfortable?"
+            },
+            {
+              "response": "Running from a challenge?"
+            }
+          ]
+        },{
+          "dialogue": "Naoto: But... to ignore it only makes me angry!",
+          "options": [
+            {
+              "response": "Good luck.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "Let's catch him together.",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "points": 5,
+      "choices": [
+        {
+          "dialogue": "Naoto: *sigh* What should I do...?",
+          "options": [
+            {
+              "response": "Soak it."
+            },
+            {
+              "response": "Burn it.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "Eat it."
+            }
+          ]
+        },
+        {
+          "dialogue": "Naoto: \"Eating letters with a red face\"...? This is...",
+          "options": [
+            {
+              "response": "A riddle."
+            },
+            {
+              "response": "A mailbox.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "A goat."
+            }
+          ]
+        },
+        {
+          "dialogue": "Naoto: Grampa had this? Why did he keep it...?",
+          "options": [
+            {
+              "response": "What was that?"
+            },
+            {
+              "response": "Good, you got it back.",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        },
+        {
+          "dialogue": "Naoto: I, er... I think I'll let this play out... And, umm, if possible...",
+          "special": "Choices marked with R reverse your bond with Naoto so are advised not to be chosen.",
+          "options": [
+            {
+              "response": "I guess I'll help.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "Let's do it.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "You're on your own.",
+              "with": "R",
+              "without": "R"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "points": 6,
+      "results": "Learns Invigorate 2",
+      "choices": [
+        {
+          "dialogue": "Naoto: Why you, though...?",
+          "options": [
+            {
+              "response": "Because I looked reliable.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "Because we looked close.",
+              "with": "3"
+            },
+            {
+              "response": "Because I looked useless.",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        },
+        {
+          "dialogue": "Naoto: When the banks close, the fruit tree grows. By the large seven at the third is the spot I chose...",
+          "options": [
+            {
+              "response": "7 and 3 o'clock, maybe...?"
+            },
+            {
+              "response": "The phrasing is suspicious."
+            },
+            {
+              "response": "The numbers are important.",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        },
+        {
+          "dialogue": "Naoto: ......",
+          "special": "L denotes Lover's Flag 1 for Naoto",
+          "options": [
+            {
+              "response": "I'm glad you're a girl.",
+              "with": "L",
+              "without": "L"
+            },
+            {
+              "response": "Your gender doesn't matter.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Nothing you can do."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "points": 8,
+      "choices": [
+        {
+          "dialogue": "Naoto: Perhaps the \"minus\" part is important...",
+          "options": [
+            {
+              "response": "Maybe it's a math problem."
+            },
+            {
+              "response": "Check the other cards again?"
+            },
+            {
+              "response": "Subtract '40' and '4'?",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        },
+        {
+          "dialogue": "Naoto: I feel that... I'm undergoing a change.",
+          "options": [
+            {
+              "response": "You'll still be you."
+            },
+            {
+              "response": "People change."
+            },
+            {
+              "response": "Don't be afraid.",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "points": 8,
+      "results": "Learns Heat Riser",
+      "choices": [
+        {
+          "dialogue": "Naoto: We may be able to catch him in the act.",
+          "options": [
+            {
+              "response": "You seem happy.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "Don't put yourself at risk.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "I felel kinda sad.",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        },
+        {
+          "dialogue": "The man brandishes a knife.",
+          "special": "L denotes Lover's Flag 2 for Naoto",
+          "options": [
+            {
+              "response": "Protect Naoto.",
+              "with": "L",
+              "without": "L"
+            },
+            {
+              "response": "Run with Naoto."
+            },
+            {
+              "response": "Fight back."
+            }
+          ]
+        },
+        {
+          "dialogue": "Naoto: Why...?!",
+          "special": "This question only appears if you pick the first choice on the previous question. L leads to the Lover's Relationship",
+          "options": [
+            {
+              "response": "Because I love you.",
+              "with": "L",
+              "without": "L"
+            },
+            {
+              "response": "Because we're friends."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 8,
+      "points": 4,
+      "choices": [
+        {
+          "dialogue": "Naoto: A place I'd be fond of...?",
+          "options": [
+            {
+              "response": "Somewhere bright."
+            },
+            {
+              "response": "Somewhere high.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Somewhere quiet."
+            }
+          ]
+        },
+        {
+          "dialogue": "Naoto: Next, what I \"can't stand\" to do. There are several possibilities, but...",
+          "options": [
+            {
+              "response": "Cooking."
+            },
+            {
+              "response": "Excercising."
+            },
+            {
+              "response": "Throwing things away?",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 9,
+      "points": 8,
+      "results": "Learns Invigorate 3",
+      "choices": [
+        {
+          "dialogue": "Naoto: Judging by the position of your TV, you regularly watch the Midnight Channel from...",
+          "lovers": true,
+          "options": [
+            {
+              "response": "Is it that interesting?"
+            },
+            {
+              "response": "Why don't you sit down?"
+            },
+            {
+              "response": "I can't relax..."
+            }
+          ]
+        },
+        {
+          "dialogue": "Naoto: D-Do you find the pitch of my voice strange?",
+          "special": "Pick the second response on this question if you want Naoto to dress as a girl for the Christmas event.",
+          "lovers": true,
+          "options": [
+            {
+              "response": "Whatever you prefer."
+            },
+            {
+              "response": "I like it higher"
+            }
+          ]
+        },
+        {
+          "dialogue": "Naoto: What about you?",
+          "options": [
+            {
+              "response": "It was a cinch."
+            },
+            {
+              "response": "It was exciting."
+            },
+            {
+              "response": "I was about to give up."
+            }
+          ]
+        },
+        {
+          "dialogue": "Naoto: Now you're my assistant!",
+          "options": [
+            {
+              "response": "Leave it to me!"
+            },
+            {
+              "response": "I want a promotion."
+            },
+            {
+              "response": "You're MY assistant."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
