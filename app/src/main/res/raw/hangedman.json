@@ -1,0 +1,367 @@
+{
+  "title": "Hanged Man Arcana : Naoki Konishi",
+  "availability": {
+    "monday": true,
+    "tuesday": true,
+    "wednesday": true,
+    "thursday": true,
+    "friday": false,
+    "saturday": false,
+    "sunday": false,
+    "rain": false,
+    "activation": "Starting from June 8th , you'll see a cutscene with Naoki for the first time. After this event , you can find him at the first floor in the learning Building. Speak with Naoki and come back the next day to talk to him again. Repeat this 3 times to activate his Social Link.",
+    "last": "November 27",
+    "location": {
+      "weekdays": "Classroom Building 1F",
+      "sundays": "Shopping District, North (Near the Liquor Store)"
+    }
+  },
+  "notes" : "Max Social Link Item is the Junes Receipt which allows you to fuse Attis.",
+  "rank": [
+    {
+      "level": 1,
+      "points": 0,
+      "choices": [
+        {
+          "dialogue": "Naoki: I usually eat here a lot because it's so close to our place, but for some reason, I haven't eaten here recently.",
+          "options": [
+            {
+              "response": "Too busy?",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "Tired because of the food?",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Because of the murder?",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        },
+        {
+          "dialogue": "Naoki: I mean... what exactly is an \"admirable life.\" anyway?",
+          "options": [
+            {
+              "response": "Contributing to society.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "Making your parents happy.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Leave something behind."
+            },
+            {
+              "response": "I don't know.",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "points": 0,
+      "choices": [
+        {
+          "dialogue": "Naoki is laughing like he's having a good time...",
+          "options": [
+            {
+              "response": "Ask him to tell another story",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Tell your own tale of failure",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "Tell an American joke",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        },
+        {
+          "dialogue": "Naoki is biting his lip...",
+          "options": [
+            {
+              "response": "I'll go tell them off."
+            },
+            {
+              "response": "You not saying anything?",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Let the gossipers gossip.",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "points": 4,
+      "choices": [
+        {
+          "dialogue": "Naoki looks distressed.",
+          "options": [
+            {
+              "response": "Talk back to the lady (Requires Lv4 Courage)",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Flatter the lady (Requires Lv4 Expression)",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Keep quiet"
+            }
+          ]
+        },
+        {
+          "dialogue": "Naoki: I'm sorry... It's a little awkward to be around me, huh?",
+          "options": [
+            {
+              "response": "It's not your fault.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Let's forget about it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "points": 4,
+      "choices": [
+        {
+          "dialogue": "Naoki: ......",
+          "options": [
+            {
+              "response": "That's a good idea.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "I don't know about that..."
+            }
+          ]
+        },
+        {
+          "dialogue": "Naoki: ... I have to do it.",
+          "options": [
+            {
+              "response": "Good luck, Naoki."
+            },
+            {
+              "response": "You've got other choices."
+            },
+            {
+              "response": "You should think it over."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "points": 4,
+      "choices": [
+        {
+          "dialogue": "Naoki: They got all suspicious of me suddenly. I wasn't expecting that at all.",
+          "options": [
+            {
+              "response": "I wouldn't have, either."
+            },
+            {
+              "response": "Just forget about them."
+            },
+            {
+              "response": "Don't worry them too much."
+            }
+          ]
+        },
+        {
+          "dialogue": "Naoki: Am i really that pitiable...?",
+          "options": [
+            {
+              "response": "Yeah, you are."
+            },
+            {
+              "response": "You're not the only one.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "I know what they mean.",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "points": 4,
+      "choices": [
+        {
+          "dialogue": "Naoki: I wanted to apologize for that.",
+          "options": [
+            {
+              "response": "I don't mind.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Last time?",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        },
+        {
+          "dialogue": "Naoki: How do I get out from that...?\nWhat would be best for me, for Sis...?\nI just don't know.",
+          "options": [
+            {
+              "response": "Take your time."
+            },
+            {
+              "response": "Take action.",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "points": 4,
+      "choices": [
+        {
+          "dialogue": "Naoki: Ironic, isn't it...?",
+          "options": [
+            {
+              "response": "They're trying to be kind."
+            },
+            {
+              "response": "Charge 'em extra."
+            }
+          ]
+        },
+        {
+          "dialogue": "Naoki: Yosuke-san sure is nosy. Oh wait, so are you...",
+          "options": [
+            {
+              "response": "Don't lump me in with him.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "We can't just ignore you.",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 8,
+      "points": 6,
+      "choices": [
+        {
+          "dialogue": "Naoki: Because I wasn't able to cry like the actors on TV, I thought that maybe I didn't actually like Sis...",
+          "options": [
+            {
+              "response": "That's not true.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "People are different.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "You're just inept.",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        },
+        {
+          "dialogue": "Naoki: She must've wanted to live more, huh?",
+          "options": [
+            {
+              "response": "Yeah, I'm sure of it."
+            },
+            {
+              "response": "I don't know."
+            },
+            {
+              "response": "Live for her sake."
+            }
+          ]
+        },{
+          "dialogue": "Naoki is biting his lip...",
+          "options": [
+            {
+              "response": "It was out of your hands."
+            },
+            {
+              "response": "She can hear you.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "Just let it all out, Naoki. (Requires Lv 5 Understanding)",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 9,
+      "points": 6,
+      "choices": [
+        {
+          "dialogue": "Naoki: Its all thanks to you",
+          "options": [
+            {
+              "response": "I didn't do anything.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "That's right. Be grateful.",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
