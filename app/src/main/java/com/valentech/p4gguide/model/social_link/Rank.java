@@ -12,6 +12,7 @@ public class Rank {
     private int points;
     private String results;
     private ArrayList<Choice> choices;
+    private String special;
 
     public int getLevel() {
         return level;
@@ -43,5 +44,13 @@ public class Rank {
 
     public void setChoices(ArrayList<Choice> choices) {
         this.choices = choices;
+    }
+
+    public String getSpecial() {
+        return special;
+    }
+
+    public void setSpecial(String special) {
+        this.special = special;
     }
 }

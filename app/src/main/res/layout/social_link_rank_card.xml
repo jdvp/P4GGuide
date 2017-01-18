@@ -23,6 +23,16 @@
             style="@style/CardSubHeader"/>
 
         <TextView
+            android:id="@+id/rank_card_overall_special"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:textSize="16sp"
+            android:textColor="@color/dialogue_special"
+            android:visibility="gone"/>
+
+        <TextView
             android:id="@+id/rank_card_points"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -96,6 +96,11 @@ public class SocialLinkFragment extends Fragment {
             TextView points = (TextView) view.findViewById(R.id.rank_card_points);
             points.setText(String.format(getString(R.string.social_link_points), rank.getPoints()));
 
+            if(rank.getSpecial() != null) {
+                TextView special = (TextView) view.findViewById(R.id.rank_card_overall_special);
+                special.setVisibility(View.VISIBLE);
+                special.setText(rank.getSpecial());
+            }
             //set choices
             LinearLayout choiceLayout = (LinearLayout) view.findViewById(R.id.choice_list);
             boolean isEvenRow = false;

@@ -1,0 +1,478 @@
+{
+  "title": "Justice Arcana: Nanako Dojima",
+  "availability": {
+    "activation": "Automatic on May 3rd.",
+    "last": "October 31",
+    "location": {
+      "weekdays": "Home (Night Only)",
+      "sundays": "Home (Night Only)"
+    }
+  },
+  "notes" : "Nanako's schedule is determined on whether you finish the dungeon or not. Whenever you have Dojima around, you cannot access Nanako's Social link.\n\nMax Social Link Item is the Family Photo which allows you to fuse Sraosha.",
+  "rank": [
+    {
+      "level": 1,
+      "points": 3,
+      "choices": [
+        {
+          "dialogue": "Nanako is fidgeting.",
+          "options": [
+            {
+              "response": "What's wrong?",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "Go ahead and ask.",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        },
+        {
+          "dialogue": "Nanako: Are you an only child?",
+          "options": [
+            {
+              "response": "That's right.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Nope."
+            }
+          ]
+        },
+        {
+          "dialogue": "Nanako: Hmmm... Then do you have a little sister?",
+          "special": "Only appears if you choose the second choice on the previous question.",
+          "options": [
+            {
+              "response": "I do."
+            },
+            {
+              "response": "I don't."
+            },
+            {
+              "response": "I have you.",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "points": 6,
+      "choices": [
+        {
+          "dialogue": "Nanako: Dad'll be disappointed.",
+          "options": [
+            {
+              "response": "I'll go buy some.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Let's go buy some together.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "He'll live"
+            }
+          ]
+        },
+        {
+          "dialogue": "Nanako looks sad.",
+          "options": [
+            {
+              "response": "I'm sorry."
+            },
+            {
+              "response": "Hear her out. (Requires LV 3 Expression)"
+            },
+            {
+              "response": "It's not Nanako's fault. (Requires LV 3 Expression)",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "points": 9,
+      "special": "Requires LV 3 Expression",
+      "choices": [
+        {
+          "dialogue": "Nanako is nodding her head cheerfully.",
+          "options": [
+            {
+              "response": "Why all these questions?"
+            },
+            {
+              "response": "Is there anything else?",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        },
+        {
+          "dialogue": "Nanako: What happens to a person when they die?",
+          "options": [
+            {
+              "response": "They disappear."
+            },
+            {
+              "response": "They go to heaven.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "I don't know.",
+              "with": "2",
+              "without": "1"
+            }
+          ]
+        },
+        {
+          "dialogue": "Nanako: Why do bad people do bad things?",
+          "options": [
+            {
+              "response": "They have no choice."
+            },
+            {
+              "response": "Because they enjoy it."
+            },
+            {
+              "response": "I don't know.",
+              "with": "2",
+              "without": "1"
+            }
+          ]
+        },
+        {
+          "dialogue": "Nanako: Are bad people more important to Dad than I am?",
+          "options": [
+            {
+              "response": "That's not true."
+            },
+            {
+              "response": "He's protecting everyone."
+            },
+            {
+              "response": "He's protecting you.",
+              "with": "2",
+              "without": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "points": 10,
+      "choices": [
+        {
+          "dialogue": "Nanako: What do they mean by \"real\"?",
+          "options": [
+            {
+              "response": "Related to you by blood."
+            },
+            {
+              "response": "A person you love a lot.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Always by your side.",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        },
+        {
+          "dialogue": "Nanako: Daddy doesn't come home because I'm not his \"real\" daughter?.",
+          "options": [
+            {
+              "response": "Did he say that?",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "That's not true."
+            },
+            {
+              "response": "You have me.",
+              "with": "2",
+              "without": "2"
+            }
+          ]
+        },
+        {
+          "dialogue": "What should you do?.",
+          "options": [
+            {
+              "response": "Talk with her",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "Put her to bed"
+            },
+            {
+              "response": "Listen to her talk (Requires LV 3 Understanding)",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "points": 12,
+      "special": "Requires LV 5 Expression.",
+      "choices": [
+        {
+          "dialogue": "Nanako looks likes she's about to cry...",
+          "options": [
+            {
+              "response": "Ask what happened."
+            },
+            {
+              "response": "Swear to it.",
+              "with": "2",
+              "without": "1"
+            }
+          ]
+        },
+        {
+          "dialogue": "Nanako: He can't come, huh?",
+          "options": [
+            {
+              "response": "He'll come.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "I don't know."
+            },
+            {
+              "response": "I'll ask him with you.",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "points": 9,
+      "choices": [
+        {
+          "dialogue": "Dojima: What's gotten into her...?",
+          "special" : "* indicates Ryotarou Dojima bonus",
+          "options": [
+            {
+              "response": "Let's go look for her.",
+              "with": "2*"
+            },
+            {
+              "response": "Let's leaver her alone.",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        },
+        {
+          "dialogue": "Dojima: She'll listen to you...",
+          "options": [
+            {
+              "response": "That's not true."
+            },
+            {
+              "response": "Why?"
+            },
+            {
+              "response": "Okay."
+            }
+          ]
+        },
+        {
+          "dialogue": "Nanako: Big bro...",
+          "options": [
+            {
+              "response": "Why'd you come here?"
+            },
+            {
+              "response": "Let's go home.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Your dad's worried."
+            }
+          ]
+        },
+        {
+          "dialogue": "Nanako: Is he going to throw me away, too...?",
+          "options": [
+            {
+              "response": "He hasn't forgotten."
+            },
+            {
+              "response": "He won't abandon you."
+            },
+            {
+              "response": "Don't worry."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "points": 6,
+      "choices": [
+        {
+          "dialogue": "Nanako: What should I do...? The teacher will yell at me.",
+          "options": [
+            {
+              "response": "I'll help you look for it.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Nothing you can do now."
+            }
+          ]
+        },
+        {
+          "dialogue": "Nanako: Why did Dad stop smiling...?",
+          "options": [
+            {
+              "response": "He's lonely, too.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Because you're lonely.",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 8,
+      "points": 10,
+      "choices": [
+        {
+          "dialogue": "Nanako: Big bro... I love my Dad.",
+          "options": [
+            {
+              "response": "I know..",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "He loves you too.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "What about me?"
+            }
+          ]
+        },
+        {
+          "dialogue": "Nanako: ...I feel sorry for him, losing someone he loves.",
+          "options": [
+            {
+              "response": "He still has you.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "She's not lost.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "I feel sorry for you too.",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        },
+        {
+          "dialogue": "What will you do...?",
+          "options": [
+            {
+              "response": "Talk to Nanako",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "Put her to bed"
+            },
+            {
+              "response": "Play with her",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 9,
+      "points": 12,
+      "choices": [
+        {
+          "dialogue": "Nanako: Big Bro, can you make a salad?",
+          "options": [
+            {
+              "response": "Sure thing.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "I think...",
+              "with": "1",
+              "without": "1"
+            },
+            {
+              "response": "I eat salad for breakfast!"
+            }
+          ]
+        },
+        {
+          "dialogue": "Nanako: You're my family, too, so...\nLet's work hard together!",
+          "options": [
+            {
+              "response": "Don't strain yourself.",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "Let's do it.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "But I'm not your Mom...",
+              "with": "2",
+              "without": "1"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
