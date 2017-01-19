@@ -1,0 +1,398 @@
+{
+  "title": "Hierophant Arcana: Ryotarou Dojima",
+  "availability": {
+    "activation": "Talk to Dojima starting from May 6th.",
+    "last": "November 3rd",
+    "location": {
+      "weekdays": "Home (Night Only)",
+      "sundays": "Home (Night Only)"
+    }
+  },
+  "notes" : "Dojima's Social Link is only available at night time. However, his appearance at home is determined by the current dungeon.\nIf you have cleared the dungeon, Dojima will get his days off and you can spend time with him. Remember though, whenever Dojima is available, you cannot access Nanako's Social Link.\n\nMax Social Link Item is the Coffee Mug which allows you to fuse Kohryu.",
+  "rank": [
+    {
+      "level": 1,
+      "special": "Requires LV 2 Expression",
+      "points": 0,
+      "choices": [
+        {
+          "dialogue": "Dojima: So... What have you been doing after school?",
+          "options": [
+            {
+              "response": "Hanging with friends.",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "Club meetings."
+            },
+            {
+              "response": "Working.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Nothing..."
+            }
+          ]
+        },
+        {
+          "dialogue": "Dojima: But its not as if we have much in common... except for the murders.",
+          "options": [
+            {
+              "response": "Do you still suspect me?"
+            },
+            {
+              "response": "Not good at talking?",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "Tell me about yourself.",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        },
+        {
+          "dialogue": "Dojima: You're more like a very young brother to me than a son.",
+          "options": [
+            {
+              "response": "That's stretching it.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Should I call you big bro?",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "points": 4,
+      "choices": [
+        {
+          "dialogue": "Dojima: \"When is always,\" huh...?",
+          "options": [
+            {
+              "response": "Why not play with her?"
+            },
+            {
+              "response": "I feel sorry for her."
+            },
+            {
+              "response": "Not good with kids?"
+            }
+          ]
+        },
+        {
+          "dialogue": "Dojima: Plus... I'm not fit to be her family...",
+          "options": [
+            {
+              "response": "Why?"
+            },
+            {
+              "response": "Fit or not, you're family.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "I don't get it.",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "points": 4,
+      "special": "Requires LV 3 Expression",
+      "choices": [
+        {
+          "dialogue": "Dojima: All we've got is instant, though.\nHow do you take it?",
+          "options": [
+            {
+              "response": "Black.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "With cream.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Cream and sugar.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "Surprise me.",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        },
+        {
+          "dialogue": "Dojima: Go watch TV with Nanako. I'll bring it to you when it's ready.",
+          "options": [
+            {
+              "response": "You don't have to do that.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "Thank you.",
+              "with": "2",
+              "without": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "special": "Requires LV 4 Expression",
+      "points": 6,
+      "choices": [
+        {
+          "dialogue": "Dojima: Oh... Sorry, I wasn't talking about you.",
+          "options": [
+            {
+              "response": "Looking for something?"
+            },
+            {
+              "response": "Can I help?",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "Working at home?",
+              "with": "2",
+              "without": "1"
+            }
+          ]
+        },
+        {
+          "dialogue": "Dojima: Its late. Go to sleep",
+          "options": [
+            {
+              "response": "Are you okay?",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "What was that about?",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "But Nanako...",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "points": 6,
+      "choices": [
+        {
+          "dialogue": "Dojima: Let's stop there.",
+          "options": [
+            {
+              "response": "Let's not.",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "Even if it's about family?",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "Then let's go outside.",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        },
+        {
+          "dialogue": "Dojima: I don't need a private life to do that.\n...Nanako will understand.",
+          "options": [
+            {
+              "response": "You're right."
+            },
+            {
+              "response": "Is this what she wants?"
+            },
+            {
+              "response": "That's just an excuse."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "points": 5,
+      "choices": [
+        {
+          "dialogue": "Dojima: I can do that anytime...",
+          "options": [
+            {
+              "response": "When's 'anytime'?"
+            },
+            {
+              "response": "This is more important, huh?",
+              "with": "2",
+              "without": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "points": 5,
+      "choices": [
+        {
+          "dialogue": "Dojima: Sorry, but my hands are full here.",
+          "options": [
+            {
+              "response": "Working at home again?"
+            },
+            {
+              "response": "Buying a new car?"
+            },
+            {
+              "response": "Want some coffee?",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        },
+        {
+          "dialogue": "Dojima: Do you understand why?",
+          "options": [
+            {
+              "response": "Because of Nanako.",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "Because her killer's loose.",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "Because you're a coward.(LV 5 Courage Required)",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 8,
+      "points": 6,
+      "choices": [
+        {
+          "dialogue": "Dojima: Er... Sorry about making you go along with this.",
+          "options": [
+            {
+              "response": "I don't mind.",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "It was fun.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "Ask me next time.",
+              "with": "2",
+              "without": "1"
+            }
+          ]
+        },
+        {
+          "dialogue": "Dojima: That's why I used revenge as an excuse to not spend time with her...",
+          "options": [
+            {
+              "response": "Was it hard?",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Do you regret it now?",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "You've stopped running?",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 9,
+      "points": 8,
+      "choices": [
+        {
+          "dialogue": "Dojima: This is your personal mug. Write your name on it later.",
+          "options": [
+            {
+              "response": "Thank you.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "What am I using now?",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "My name? That's okay...",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        },
+        {
+          "dialogue": "Dojima: Sorry, but take care of Nanako.",
+          "options": [
+            {
+              "response": "Go get 'em.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Be careful.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Leave it to me.",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
