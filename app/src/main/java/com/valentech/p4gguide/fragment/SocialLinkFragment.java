@@ -95,6 +95,9 @@ public class SocialLinkFragment extends Fragment {
             //set points needed
             TextView points = (TextView) view.findViewById(R.id.rank_card_points);
             points.setText(String.format(getString(R.string.social_link_points), rank.getPoints()));
+            if(rank.getPoints() == 0) {
+                points.setVisibility(View.GONE);
+            }
 
             if(rank.getSpecial() != null) {
                 TextView special = (TextView) view.findViewById(R.id.rank_card_overall_special);

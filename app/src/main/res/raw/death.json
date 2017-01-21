@@ -1,0 +1,395 @@
+{
+  "title": "Death Arcana : Hisano Kuroda",
+  "availability": {
+    "activation": "When you reach Devil's Social Link up to rank 4, you'll see an event with Hisano. After this, you can find her at the Flood Plain on Sundays (Or Holidays). Talk to her to start the Social Link.",
+    "last": "November 27th",
+    "location": {
+      "weekdays": "Riverbank",
+      "sundays": "Riverbank"
+    }
+  },
+  "notes" : "After Hisano becomes available (after Devil rank 4), she will be available at the riverbank on Sundays and Holidays.\n\nMax Social Link Item is the Old Fountain Pen which allows you to fuse Mahakala.",
+  "rank": [
+    {
+      "level": 1,
+      "points": 0,
+      "choices": [
+        {
+          "dialogue": "Hisano: Haha, he was a handsome man.",
+          "options": [
+            {
+              "response": "Who are you talking about?",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "So he didn't look like me?",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Stop staring at me.",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        },
+        {
+          "dialogue": "Hisano: Do I look like Death to you?",
+          "options": [
+            {
+              "response": "Yes, you do."
+            },
+            {
+              "response": "No, you don't."
+            },
+            {
+              "response": "This is stupid."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "points": 0,
+      "choices": [
+        {
+          "dialogue": "Hisano: Watching the river here with you, like this, brings back memories...",
+          "options": [
+            {
+              "response": "Of what?",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "What about the river?",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        },
+        {
+          "dialogue": "Hisano: ...I was happy back then.",
+          "options": [
+            {
+              "response": "I'm jealous.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "What about now?",
+              "with": "2",
+              "without": "1"
+            }
+          ]
+        },
+        {
+          "dialogue": "Hisano: He went to Heaven...\nand I will surely go to Hell.",
+          "options": [
+            {
+              "response": "That's not true!",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Don't torture yourself.",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "points": 0,
+      "choices": [
+        {
+          "dialogue": "Hisano: My husband's tsuki meinichi is today, and I've just come back from visiting his grave.",
+          "options": [
+            {
+              "response": "Tsuki meinichi?.",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "That must have been tough.",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "Don't be depressed.",
+              "with": "2",
+              "without": "1"
+            }
+          ]
+        },
+        {
+          "dialogue": "Hisano: For those trying to reach the gods, and to the families of those people, Death can be an ally.",
+          "options": [
+            {
+              "response": "That may be true."
+            },
+            {
+              "response": "I don't think so."
+            },
+            {
+              "response": "I don't really know."
+            }
+          ]
+        },
+        {
+          "dialogue": "Hisano: You don't quite understand it yet, do you?",
+          "options": [
+            {
+              "response": "I don't get it."
+            },
+            {
+              "response": "I think I understand."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "points": 0,
+      "choices": [
+        {
+          "dialogue": "Hisano: It must be boring, listening to this old bag's stories...",
+          "options": [
+            {
+              "response": "It's actually interesting.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "I'm just killing time",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        },
+        {
+          "dialogue": "Hisano: Enough about me. I want to hear something from you. Tell me anything.",
+          "options": [
+            {
+              "response": "Talk about school",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Talk about the murders"
+            },
+            {
+              "response": "Talk about girls",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        },
+        {
+          "dialogue": "Hisano: But... I do not want to see you anymore.",
+          "options": [
+            {
+              "response": "Why not?"
+            },
+            {
+              "response": "I'm hurt."
+            },
+            {
+              "response": "But I want to see you."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "points": 0,
+      "choices": [
+        {
+          "dialogue": "Hisano: Being noncommittal... floating around, never deciding to be one thing nor another.\nCan a man understand that?",
+          "options": [
+            {
+              "response": "I get it.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "I don't get it.",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        },
+        {
+          "dialogue": "Hisano: But I wanted to write my reply so badly, so I would grow impatient and read it carefully, over and over.",
+          "options": [
+            {
+              "response": "What were they about?"
+            },
+            {
+              "response": "Letters? How inconvenient.",
+              "with": "2",
+              "without": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "special": "In order to trigger this rank-up, you will need to talk to Old Man Daidara at the Weapon Shop and retrieve Hisano's old letters.",
+      "points": 0,
+      "choices": [
+        {
+          "dialogue": "What should you do...?",
+          "options": [
+            {
+              "response": "Read them"
+            },
+            {
+              "response": "Wait for Hisano"
+            }
+          ]
+        },
+        {
+          "dialogue": "Hisano: I'm sure he never imagined that the \"Hisa-san\" he loved would some day wish to see him dead...",
+          "options": [
+            {
+              "response": "What do you mean?"
+            },
+            {
+              "response": "You didn't love him?"
+            }
+          ]
+        }
+        ,
+        {
+          "dialogue": "Hisano: That was his punishment. Punishment for forgetting me...",
+          "options": [
+            {
+              "response": "That's a cruel tale."
+            },
+            {
+              "response": "That must've been tough."
+            },
+            {
+              "response": "......"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "points": 0,
+      "choices": [
+        {
+          "dialogue": "Hisano: I must accept that...",
+          "options": [
+            {
+              "response": "Take your time.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Hang in there.",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 8,
+      "points": 0,
+      "choices": [
+        {
+          "dialogue": "Hisano: I didn't want to accept that he had died all by himself, not remembering me, leaving me behind...",
+          "options": [
+            {
+              "response": "I understand the feeling.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "That's selfish.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "I don't understand.",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        },
+        {
+          "dialogue": "Hisano: Haha... But it's too late now, isn't it?",
+          "options": [
+            {
+              "response": "I guess so.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "No, it isn't.",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 9,
+      "points": 0,
+      "choices": [
+        {
+          "dialogue": "Hisano: At first, I turned them down because I didn't want to leave the place I was born in, but...",
+          "options": [
+            {
+              "response": "They kept insisting?",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "What about your husband?",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        },
+        {
+          "dialogue": "Hisano: I'd feel that... our story hasn't truly ended...",
+          "options": [
+            {
+              "response": "Hasn't it?"
+            },
+            {
+              "response": "I'll treasure it."
+            }
+          ]
+        },
+        {
+          "dialogue": "Hisano: ...Do you have someone you love?",
+          "options": [
+            {
+              "response": "I do."
+            },
+            {
+              "response": "I don't."
+            },
+            {
+              "response": "I'm not too sure."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
