@@ -1,0 +1,386 @@
+{
+  "title": "Devil Arcana : Sayoko Uehara",
+  "availability": {
+    "monday": false,
+    "tuesday": false,
+    "wednesday": true,
+    "thursday": true,
+    "friday": true,
+    "saturday": false,
+    "sunday": false,
+    "rain": false,
+    "activation": "Starting from May 25th, go to the Shopping District North and look for the bulletin board (close to Aiya). Apply for the Hospital Janitor job. When the job is available, go to Shopping District, South and examine the bus stop to go to the hospital job. You have to take the job twice before the social link starts. (Requires LV 3 Diligence)",
+    "last": "November 27th",
+    "location": {
+      "weekdays": "Bus Stop in Shopping District, South"
+    }
+  },
+  "notes" : "Max Social Link Item is the Hospital ID which allows you to fuse Beelzebub.",
+  "rank": [{
+      "level": 0,
+      "points": 0,
+      "choices": [
+        {
+          "dialogue": "Sayoko: Don't worry, no one'll see...",
+          "options": [
+            {
+              "response": "Stop it!"
+            },
+            {
+              "response": "I'm not interested."
+            },
+            {
+              "response": "If you insist..."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 1,
+      "points": 0,
+      "choices": [
+        {
+          "dialogue": "Sayoko: Would you like to study with me? Perhaps a subject that they don't teach in school, if you catch my drift...?",
+          "options": [
+            {
+              "response": "What do you mean?",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "I'm not interested",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "Please, by all means."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "points": 0,
+      "choices": [
+        {
+          "dialogue": "Sayoko: ...So why are you working at a job like this?",
+          "options": [
+            {
+              "response": "For the money.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "To be closer to you.",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "To have something to do.",
+              "with": "2",
+              "without": "1"
+            }
+          ]
+        },
+        {
+          "dialogue": "Sayoko: Speaking of which...\nSay, do you have a girlfriend?",
+          "options": [
+            {
+              "response": "I do.",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "I do not."
+            },
+            {
+              "response": "Right in front of me.",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "Why do you ask?"
+            }
+          ]
+        },
+        {
+          "dialogue": "Sayoko: ...Do you see what i'm getting at?",
+          "options": [
+            {
+              "response": "Oh, yes."
+            },
+            {
+              "response": "No...",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "Stop it!",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "points": 3,
+      "choices": [
+        {
+          "dialogue": "Old lady in black: Do you work here?",
+          "options": [
+            {
+              "response": "Only part time..."
+            },
+            {
+              "response": "I'm a high school student."
+            }
+          ]
+        },
+        {
+          "dialogue": "Old lady in black: But i won't be coming back here anymore...",
+          "options": [
+            {
+              "response": "What were you here for?"
+            },
+            {
+              "response": "Why are you wearing black?"
+            },
+            {
+              "response": "We should meet again."
+            }
+          ]
+        },
+        {
+          "dialogue": "Sayoko: ... Don't ask what happened here.",
+          "options": [
+            {
+              "response": "...Okay.",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "I'd rather not know.",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "...I can't stay in here.",
+              "with": "2",
+              "without": "1"
+            }
+          ]
+        },
+        {
+          "dialogue": "Sayoko: They only need me when they're my patients... In the end, they all leave me.",
+          "options": [
+            {
+              "response": "That's just how it is."
+            },
+            {
+              "response": "It's good they get better."
+            },
+            {
+              "response": "Why don't you switch jobs?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "points": 3,
+      "choices": [
+        {
+          "dialogue": "Sayoko: That was the first time anyone ever called me a \"slutty bitch\" to my face...",
+          "options": [
+            {
+              "response": "What happened?"
+            },
+            {
+              "response": "It's like a soap opera.",
+              "with": "2",
+              "without": "1"
+            }
+          ]
+        },
+        {
+          "dialogue": "Sayoko: *sigh* The other nurse were just watching, with these stupid smirks on their faces.",
+          "options": [
+            {
+              "response": "That can't be helped."
+            },
+            {
+              "response": "I wish I'd seen it."
+            }
+          ]
+        },
+        {
+          "dialogue": "Sayoko: What am I living for...?",
+          "options": [
+            {
+              "response": "Comfort her (Requires LV 5 Understanding)",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Cheer her up",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "Keep quiet"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "points": 4,
+      "choices": [
+        {
+          "dialogue": "Sayoko isn't saying anything...",
+          "options": [
+            {
+              "response": "Did something happen?"
+            },
+            {
+              "response": "Are you not feeling well?"
+            },
+            {
+              "response": "Are we done here?"
+            }
+          ]
+        },
+        {
+          "dialogue": "Sayoko: What am I doing...?",
+          "options": [
+            {
+              "response": "Don't blame yourself."
+            },
+            {
+              "response": "It couldn't be helped."
+            },
+            {
+              "response": "Think about what you did."
+            }
+          ]
+        },
+        {
+          "dialogue": "Sayoko seems to be tormenting herself.",
+          "options": [
+            {
+              "response": "Watch her silently"
+            },
+            {
+              "response": "Say something to her"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "points": 2,
+      "choices": [
+        {
+          "dialogue": "Sayoko looks a bit pale. She also seems to be very tired.",
+          "options": [
+            {
+              "response": "You should get some rest...",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "Hang in there.",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "points": 6,
+      "special": "Automatic rank up. There are no dialogue options for this rank up."
+    },
+    {
+      "level": 8,
+      "points": 4,
+      "choices": [
+        {
+          "dialogue": "Middle-aged nurse: We're going to be needing this room, so can you get all your cleaning supplies out of here?",
+          "options": [
+            {
+              "response": "Is there an emergency?"
+            },
+            {
+              "response": "At this time of night?"
+            }
+          ]
+        },
+        {
+          "dialogue": "Sayoko: I was just a little wobbly...",
+          "options": [
+            {
+              "response": "Overworking, I hear?"
+            },
+            {
+              "response": "It's important to rest."
+            }
+          ]
+        },
+        {
+          "dialogue": "What should you do...?",
+          "options": [
+            {
+              "response": "Physician, heal thyself."
+            },
+            {
+              "response": "Can you help anyone now?"
+            },
+            {
+              "response": "Don't do it all yourself."
+            }
+          ]
+        },
+        {
+          "dialogue": "Sayoko: Otherwise... I'd never be able to face him again...",
+          "options": [
+            {
+              "response": "Would 'he' want that?"
+            },
+            {
+              "response": "You're doing it for yourself."
+            },
+            {
+              "response": "You're just running away."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 9,
+      "points": 13,
+      "choices": [
+        {
+          "dialogue": "Sayoko: I wanted to say goodbye.",
+          "options": [
+            {
+              "response": "Goodbye?"
+            },
+            {
+              "response": "Take care..."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

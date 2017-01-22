@@ -3,13 +3,11 @@ package com.valentech.p4gguide.fragment;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.res.Resources;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.res.ResourcesCompat;
-import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -119,70 +117,77 @@ public class SocialLinkFragment extends Fragment {
                 lovers.setGravity(Gravity.CENTER_HORIZONTAL);
                 choiceLayout.addView(lovers);
             }
-            for(Choice choice : rank.getChoices()) {
-                View choiceView = inflater.inflate(R.layout.choice_item, layout, false);
-                if(choice.isLovers()) {
-                    if(isEvenRow) {
-                        choiceView.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.dialogue_row_one_lovers));
-                    } else {
-                        choiceView.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.dialogue_row_two_lovers));
-                    }
-                } else {
-                    if(isEvenRow) {
-                        choiceView.setBackgroundColor(ContextCompat.getColor(getActivity(),R.color.dialogue_row_one));
-                    } else {
-                        choiceView.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.dialogue_row_two));
-                    }
-
-                    if(hasLoversChoices && isFirstFriendAfterLovers) {
-
-                        TextView friends = new TextView(getActivity());
-                        friends.setText(getString(R.string.friends_relationship));
-                        friends.setPadding(getPixelsFromDP(16), getPixelsFromDP(8), getPixelsFromDP(16), 0);
-                        friends.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-                        friends.setGravity(Gravity.CENTER_HORIZONTAL);
-                        choiceLayout.addView(friends);
-                        isFirstFriendAfterLovers = false;
-                    }
+            if(rank.getChoices() == null || rank.getChoices().isEmpty()) {
+                View dialogueHeaderText = view.findViewById(R.id.social_link_choices_header);
+                if(dialogueHeaderText != null) {
+                    dialogueHeaderText.setVisibility(View.GONE);
                 }
-
-                isEvenRow = !isEvenRow;
-
-                TextView dialogue = (TextView) choiceView.findViewById(R.id.dialogue);
-                dialogue.setText(choice.getDialogue());
-
-                if(choice.getSpecial() != null) {
-                    TextView special = (TextView) choiceView.findViewById(R.id.special);
-                    special.setText(choice.getSpecial());
-                    special.setVisibility(View.VISIBLE);
-                }
-
-                ArrayList<Option> options = choice.getOptions();
-                if(options != null && !options.isEmpty()) {
-                    LinearLayout choiceGrid = (LinearLayout) choiceView.findViewById(R.id.choice_grid);
-                    View headerView = inflater.inflate(R.layout.choice_grid_item, layout, false);
-                    ((TextView)headerView.findViewById(R.id.dialogue_item)).setText("");
-                    ((TextView)headerView.findViewById(R.id.with)).setText("W");
-                    ((TextView)headerView.findViewById(R.id.without)).setText("W/O");
-                    choiceGrid.addView(headerView);
-
-                    for(int i = 0; i < options.size(); i++) {
-                        String with = options.get(i).getWith();
-                        if(with == null) {
-                            with = "-";
+            } else {
+                for (Choice choice : rank.getChoices()) {
+                    View choiceView = inflater.inflate(R.layout.choice_item, layout, false);
+                    if (choice.isLovers()) {
+                        if (isEvenRow) {
+                            choiceView.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.dialogue_row_one_lovers));
+                        } else {
+                            choiceView.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.dialogue_row_two_lovers));
                         }
-                        String without = options.get(i).getWithout();
-                        if(without == null) {
-                            without = "-";
+                    } else {
+                        if (isEvenRow) {
+                            choiceView.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.dialogue_row_one));
+                        } else {
+                            choiceView.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.dialogue_row_two));
                         }
-                        View itemView = inflater.inflate(R.layout.choice_grid_item, layout, false);
-                        ((TextView)itemView.findViewById(R.id.dialogue_item)).setText((i + 1) + ". " + options.get(i).getResponse());
-                        ((TextView)itemView.findViewById(R.id.with)).setText(with);
-                        ((TextView)itemView.findViewById(R.id.without)).setText(without);
-                        choiceGrid.addView(itemView);
+
+                        if (hasLoversChoices && isFirstFriendAfterLovers) {
+
+                            TextView friends = new TextView(getActivity());
+                            friends.setText(getString(R.string.friends_relationship));
+                            friends.setPadding(getPixelsFromDP(16), getPixelsFromDP(8), getPixelsFromDP(16), 0);
+                            friends.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+                            friends.setGravity(Gravity.CENTER_HORIZONTAL);
+                            choiceLayout.addView(friends);
+                            isFirstFriendAfterLovers = false;
+                        }
                     }
+
+                    isEvenRow = !isEvenRow;
+
+                    TextView dialogue = (TextView) choiceView.findViewById(R.id.dialogue);
+                    dialogue.setText(choice.getDialogue());
+
+                    if (choice.getSpecial() != null) {
+                        TextView special = (TextView) choiceView.findViewById(R.id.special);
+                        special.setText(choice.getSpecial());
+                        special.setVisibility(View.VISIBLE);
+                    }
+
+                    ArrayList<Option> options = choice.getOptions();
+                    if (options != null && !options.isEmpty()) {
+                        LinearLayout choiceGrid = (LinearLayout) choiceView.findViewById(R.id.choice_grid);
+                        View headerView = inflater.inflate(R.layout.choice_grid_item, layout, false);
+                        ((TextView) headerView.findViewById(R.id.dialogue_item)).setText("");
+                        ((TextView) headerView.findViewById(R.id.with)).setText("W");
+                        ((TextView) headerView.findViewById(R.id.without)).setText("W/O");
+                        choiceGrid.addView(headerView);
+
+                        for (int i = 0; i < options.size(); i++) {
+                            String with = options.get(i).getWith();
+                            if (with == null) {
+                                with = "-";
+                            }
+                            String without = options.get(i).getWithout();
+                            if (without == null) {
+                                without = "-";
+                            }
+                            View itemView = inflater.inflate(R.layout.choice_grid_item, layout, false);
+                            ((TextView) itemView.findViewById(R.id.dialogue_item)).setText((i + 1) + ". " + options.get(i).getResponse());
+                            ((TextView) itemView.findViewById(R.id.with)).setText(with);
+                            ((TextView) itemView.findViewById(R.id.without)).setText(without);
+                            choiceGrid.addView(itemView);
+                        }
+                    }
+                    choiceLayout.addView(choiceView);
                 }
-                choiceLayout.addView(choiceView);
             }
 
             //set results
