@@ -12,7 +12,8 @@
     "activation": "Starting from May 25th, go to the Shopping District North and look for the bulletin board (close to Aiya). Apply for the Hospital Janitor job. When the job is available, go to Shopping District, South and examine the bus stop to go to the hospital job. You have to take the job twice before the social link starts. (Requires LV 3 Diligence)",
     "last": "November 27th",
     "location": {
-      "weekdays": "Bus Stop in Shopping District, South"
+      "weekdays": "Bus Stop in Shopping District, South",
+      "sundays": "Bus Stop in Shopping District, South"
     }
   },
   "notes" : "Max Social Link Item is the Hospital ID which allows you to fuse Beelzebub.",

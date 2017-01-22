@@ -42,9 +42,12 @@ public class ResourceUtility {
         return getGenericHtmlFromAssets(context, "day_not_found.html");
     }
 
-
     public static String getLoading(Context context) {
         return getGenericHtmlFromAssets(context, "loading.html");
+    }
+
+    public static String getDailyHtml(Context context, String day) {
+        return getGenericHtmlFromAssets(context, day + ".txt");
     }
 
     private static String getGenericHtmlFromAssets(Context context, String string) {

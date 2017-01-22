@@ -92,15 +92,20 @@ public class DayFragment extends Fragment {
             });
         }
 
-        //if the page is cached, load it
-        String cachedPage = ResourceUtility.getPreference(getActivity(), date);
-        if(cachedPage != null) {
+        //if we have a local version of the page, show it
+        String cachedPage = ResourceUtility.getDailyHtml(getActivity(), date.toLowerCase());
+
+        //otherwise, check the cache for the page
+        if(cachedPage == null || cachedPage.isEmpty()) {
+            ResourceUtility.getPreference(getActivity(), date);
+        }
+        if(cachedPage != null && !cachedPage.isEmpty()) {
             view.loadDataWithBaseURL("file:///android_asset/", cachedPage, "text/html", "utf-8", null);
             pageLoaded = true;
             return dayView;
         }
 
-        //otherwise retrieve and cache
+        //otherwise retrieve from the internet and then add to cache
         Runnable loadPage = new LoadWalkthroughPageRunnable(getActivity(), date, view);
         new AbstractAsyncTask().run(loadPage).execute();
         return dayView;

@@ -345,7 +345,7 @@ public class SocialLinkFragment extends Fragment {
                 container.removeAllViews();
             }
 
-            if(item != null) {
+            if(item != null && container != null) {
                 TextView headerText = new TextView(getActivity());
                 headerText.setText(item.getDayName());
                 container.addView(headerText);

@@ -1,0 +1,457 @@
+{
+  "title": "Tower Arcana : Shu Nakajima",
+  "availability": {
+    "monday": false,
+    "tuesday": true,
+    "wednesday": false,
+    "thursday": true,
+    "friday": false,
+    "saturday": true,
+    "sunday": false,
+    "rain": false,
+    "activation": "Starting from May 25th, go to the Shopping District North and look for the bulletin board (close to Aiya). Apply for the Tutoring job. When the job is available, go to Shopping District, South and examine the bus stop to go to the hospital job. (Requires LV 5 Understanding)",
+    "last": "November 27th",
+    "location": {
+      "weekdays": "Bus Stop in Shopping District, South (Night only)",
+      "sundays": "Bus Stop in Shopping District, South (Night only)"
+    }
+  },
+  "notes" : "Max Social Link Item is Test Results which allow you to fuse Shiva.",
+  "rank": [{
+      "level": 0,
+      "points": 0,
+      "choices": [
+        {
+          "dialogue": "Shu: If I think you're inadequate, I'll have you replaced immediately. Remember that.",
+          "options": [
+            {
+              "response": "Nice to meet you."
+            },
+            {
+              "response": "Don't worry about me."
+            },
+            {
+              "response": "Wow, you're a little prick."
+            }
+          ]
+        },
+        {
+          "dialogue": "You feel confident that you should teach him:",
+          "options": [
+            {
+              "response": "Math (Expression UP, Knowledge UP)"
+            },
+            {
+              "response": "English (Expression UP, Knowledge UP)"
+            },
+            {
+              "response": "PE (Diligence UP, Expression UP, Knowledge UP)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 1,
+      "points": 0,
+      "choices": [
+        {
+          "dialogue": "Shu: ...If I get into a good college...\nAm I really \"set\"?",
+          "options": [
+            {
+              "response": "Of course."
+            },
+            {
+              "response": "I don't know."
+            },
+            {
+              "response": "I don't think so."
+            }
+          ]
+        },
+        {
+          "dialogue": "Shu: ...Do you know what that means?",
+          "options": [
+            {
+              "response": "Sure I do.",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "No, what?"
+            }
+          ]
+        },
+        {
+          "dialogue": "Shu: Huh... Time's already up. We were still in the middle of that last question...",
+          "options": [
+            {
+              "response": "Wait until next time."
+            },
+            {
+              "response": "I'll stay and help you. (Requires LV 5 Diligence)",
+              "with": "2",
+              "without": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "points": 2,
+      "choices": [
+        {
+          "dialogue": "Shu: What do you think of your school?",
+          "options": [
+            {
+              "response": "It's fun."
+            },
+            {
+              "response": "It's strict.",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "It's boring.",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        },
+        {
+          "dialogue": "Shu: ......",
+          "options": [
+            {
+              "response": "I'm a transfer student, too."
+            },
+            {
+              "response": " Well, it is the countryside.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "Make friends with him."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "points": 6,
+      "choices": [
+        {
+          "dialogue": "Shu: ...They don't get what it means to learn at all.",
+          "options": [
+            {
+              "response": "That's just how it is.",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "That's not true."
+            }
+          ]
+        },
+        {
+          "dialogue": "Shu: That place...",
+          "options": [
+            {
+              "response": "It's the law."
+            },
+            {
+              "response": "You don't have to go."
+            },
+            {
+              "response": "You're not the only one! (Courage UP)",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "points": 3,
+      "choices": [
+        {
+          "dialogue": "Shu: Is there any bullying at your school?",
+          "options": [
+            {
+              "response": "Yes, there is."
+            },
+            {
+              "response": "No, there isn't.",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "Not that I know of..."
+            }
+          ]
+        },
+        {
+          "dialogue": "Shu: Maybe that's not the same thing as bullying.",
+          "options": [
+            {
+              "response": "Just ignore them."
+            },
+            {
+              "response": "Put some effort into it.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "Leave it to me."
+            }
+          ]
+        },
+        {
+          "dialogue": "Shu: It seems that I've been talking to you about things that really aren't relevant to my studies...",
+          "options": [
+            {
+              "response": "It's not like you.",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "I don't mind.",
+              "with": "2",
+              "without": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "points": 5,
+      "choices": [
+        {
+          "dialogue": "Shu: *sigh*",
+          "options": [
+            {
+              "response": "Were they a pain in the ass?"
+            },
+            {
+              "response": "Didn't you join in?"
+            }
+          ]
+        },
+        {
+          "dialogue": "Shu: ...They're all stupid.",
+          "options": [
+            {
+              "response": "You're just at that age."
+            },
+            {
+              "response": "That's not true."
+            }
+          ]
+        },
+        {
+          "dialogue": "Shu: Um... You only come here because you're being paid to, right?",
+          "options": [
+            {
+              "response": "Of course."
+            },
+            {
+              "response": "That's just one reason.",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "That's not it.",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "points": 5,
+      "choices": [
+        {
+          "dialogue": "Shu: ...I wish I was a genius.",
+          "options": [
+            {
+              "response": "Work hard, and you can be."
+            },
+            {
+              "response": "You already are one."
+            },
+            {
+              "response": "Just give up now."
+            }
+          ]
+        },
+        {
+          "dialogue": "Shu: Let's change the subject to something else. What's up?",
+          "options": [
+            {
+              "response": "The other day at school...(Expression UP)"
+            },
+            {
+              "response": "About these murders...(Expression UP)",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "What I like in a girl is...(Courage UP)",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "points": 4,
+      "special": "The next time you visit this social link, you will automatically go home instead.", "choices": [
+        {
+          "dialogue": "Shu: Is it possible for anyone to be all those things? Do you know anyone like that?",
+          "options": [
+            {
+              "response": "I do."
+            },
+            {
+              "response": "Nope."
+            },
+            {
+              "response": "This guy.",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        },
+        {
+          "dialogue": "Shu: ...Every time I have that dream, the person gets one car closer to me.",
+          "options": [
+            {
+              "response": "You must be tired."
+            },
+            {
+              "response": "You must be possessed."
+            }
+          ]
+        },
+        {
+          "dialogue": "Shu suddenly looks tormented",
+          "options": [
+            {
+              "response": "Ask him, what he's worried about",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "Cheer him up",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "Leave him alone"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 8,
+      "points": 4,
+      "choices": [
+        {
+          "dialogue": "Shu: Today...is my birthday, I forgot...",
+          "options": [
+            {
+              "response": "Happy birthday."
+            },
+            {
+              "response": "Don't forget next time."
+            }
+          ]
+        },
+        {
+          "dialogue": "Shu looks sad...",
+          "options": [
+            {
+              "response": "Have a grand celebration"
+            },
+            {
+              "response": "Have a modest celebration"
+            }
+          ]
+        },
+        {
+          "dialogue": "First, you need...",
+          "options": [
+            {
+              "response": "Cake"
+            },
+            {
+              "response": "Presents"
+            },
+            {
+              "response": "Guests"
+            }
+          ]
+        },
+        {
+          "dialogue": "Only one place springs to mind...",
+          "special" : "This line only shows if you pick the first choice on the last question.",
+          "options": [
+            {
+              "response": "Junes."
+            }
+          ]
+        },
+        {
+          "dialogue": "Shu begins to sob...",
+          "options": [
+            {
+              "response": "Soothe him"
+            },
+            {
+              "response": "Wait for him to calm down"
+            }
+          ]
+        },
+        {
+          "dialogue": "Shu begins to cry again.",
+          "options": [
+            {
+              "response": "Comfort him"
+            },
+            {
+              "response": "Kindly reason with him"
+            },
+            {
+              "response": "Sternly scold him"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 9,
+      "points": 0,
+      "choices": [
+        {
+          "dialogue": "Shu: Thank you for recognizing... \"me.\" I wouldn't have been able to talk to Mom if you hadn't.",
+          "options": [
+            {
+              "response": "I'm proud of you."
+            },
+            {
+              "response": "No, it's all you."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
