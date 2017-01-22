@@ -1,0 +1,427 @@
+{
+  "title": "Temperance Arcana : Eri Minami",
+  "availability": {
+    "monday": true,
+    "tuesday": false,
+    "wednesday": false,
+    "thursday": false,
+    "friday": true,
+    "saturday": true,
+    "sunday": false,
+    "rain": false,
+    "activation": "Starting from May 2nd, go to the Shopping District North and look for the bulletin board (close to Aiya). Apply for the Assistant Daycare Caretaker job. When the job is available, go to Shopping District, South and examine the bus stop to go to the daycare job. You have to take the job twice before the social link starts.",
+    "last": "November 27th",
+    "location": {
+      "weekdays": "Bus Stop in Shopping District, South",
+      "sundays": "Bus Stop in Shopping District, South"
+    }
+  },
+  "notes" : "Max Social Link Item is the Clover Bookmark which allows you to fuse Vishnu.",
+  "rank": [
+    {
+      "level": 1,
+      "points": 0,
+      "choices": [
+        {
+          "dialogue": "Eri: ...Do you like children?",
+          "options": [
+            {
+              "response": "Yeah, I like kids."
+            },
+            {
+              "response": "I'm on the fence.",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "I hate kids.",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        },
+        {
+          "dialogue": "Eri: I don't hate him, but...",
+          "options": [
+            {
+              "response": "Do you like him?"
+            },
+            {
+              "response": "You have problems with him?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "points": 2,
+      "choices": [
+        {
+          "dialogue": "Eri: I guess he wants to see his father.",
+          "options": [
+            {
+              "response": "Probably.",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "I don't know",
+              "with": "2",
+              "without": "2"
+            }
+          ]
+        },
+        {
+          "dialogue": "Eri: *sigh* He's so inconsiderate...",
+          "options": [
+            {
+              "response": "Do you love Yuuta?"
+            },
+            {
+              "response": "Do you love your husband?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "points": 2,
+      "choices": [
+        {
+          "dialogue": "Eri: I should have known better than to try.\nWe're not related, so there's nothing I can do about it...",
+          "options": [
+            {
+              "response": "So, Yuuta can't love you?"
+            },
+            {
+              "response": "So, you can't love Yuuta?"
+            }
+          ]
+        },
+        {
+          "dialogue": "Eri: Doesn't that make you feel better?\nIsn't that a wonderful idea?",
+          "options": [
+            {
+              "response": "You're right...",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "It's a boring idea."
+            },
+            {
+              "response": "It's not a good idea."
+            }
+          ]
+        },
+        {
+          "dialogue": "Eri: Honestly, though... I just want to go back to the city.",
+          "options": [
+            {
+              "response": "Why don't you go back?"
+            },
+            {
+              "response": "Why don't you take Yuuta?"
+            },
+            {
+              "response": "Just let it go.",
+              "with": "2",
+              "without": "1"
+            }
+          ]
+        },
+        {
+          "dialogue": "Eri: Please don't tell Yuu-kun...\nOr the other mothers.",
+          "options": [
+            {
+              "response": "I won't."
+            },
+            {
+              "response": "Why would I?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "points": 4,
+      "choices": [
+        {
+          "dialogue": "Yuuta: ...Is she mad at me?",
+          "options": [
+            {
+              "response": "She's angry."
+            },
+            {
+              "response": "She's not angry."
+            },
+            {
+              "response": "Just apologize, Yuuta."
+            }
+          ]
+        },
+        {
+          "dialogue": "Yuuta: ......",
+          "options": [
+            {
+              "response": "She doesn't hate you.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Just give it time."
+            },
+            {
+              "response": "Be a better kid, then."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "points": 3,
+      "choices": [
+        {
+          "dialogue": "Yuuta: ...I've never seen Phoenix Ranger Featherman R.",
+          "options": [
+            {
+              "response": "Why not?"
+            },
+            {
+              "response": "You should watch it."
+            }
+          ]
+        },
+        {
+          "dialogue": "Yuuta: ...She's always watching TV.",
+          "options": [
+            {
+              "response": "She won't let you watch it?"
+            },
+            {
+              "response": "Have you asked to watch it?"
+            }
+          ]
+        },
+        {
+          "dialogue": "Eri: *huff* *huff* I'm sorry I'm late...",
+          "options": [
+            {
+              "response": "No problem."
+            },
+            {
+              "response": "Yuuta was lonely."
+            },
+            {
+              "response": "Apologize to Yuuta, not me."
+            }
+          ]
+        },
+        {
+          "dialogue": "Eri: I don't know what a child wants...",
+          "options": [
+            {
+              "response": "Featherman R.",
+              "with": "3",
+              "without": "1"
+            },
+            {
+              "response": "Money."
+            },
+            {
+              "response": "A loving mother."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "points": 4,
+      "choices": [
+        {
+          "dialogue": "Yuuta: You told her I liked Phoenix Ranger Featherman R, huh?",
+          "options": [
+            {
+              "response": "I might have."
+            },
+            {
+              "response": "I didn't."
+            },
+            {
+              "response": "Tell who?"
+            }
+          ]
+        },
+        {
+          "dialogue": "Yuuta: I-In return for her gift!?",
+          "options": [
+            {
+              "response": "Anything would."
+            },
+            {
+              "response": "Just be a good boy."
+            },
+            {
+              "response": "Think of it yourself."
+            }
+          ]
+        },
+        {
+          "dialogue": "Eri: I wonder if he's afraid of me.",
+          "options": [
+            {
+              "response": "Maybe."
+            },
+            {
+              "response": "He's not afraid of you.",
+              "with": "2"
+            },
+            {
+              "response": "You're both afraid.",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        },
+        {
+          "dialogue": "Eri: He must hate the fact that I'm here.",
+          "options": [
+            {
+              "response": "You can't help it."
+            },
+            {
+              "response": "That's not true.",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "points": 6,
+      "choices": [
+        {
+          "dialogue": "Ms. Nakamura: Oh, who is this? He seems a bit young to be your husband.",
+          "options": [
+            {
+              "response": "I'm a day care assistant."
+            },
+            {
+              "response": "I'm [Main Character's name]."
+            },
+            {
+              "response": "Actually, I am her husband."
+            }
+          ]
+        },
+        {
+          "dialogue": "Eri: If only... If only he was a more studious child...",
+          "options": [
+            {
+              "response": "It's not his fault."
+            },
+            {
+              "response": "Grades aren't a factor."
+            },
+            {
+              "response": "It's your own fault."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 8,
+      "points": 4,
+      "choices": [
+        {
+          "dialogue": "Eri: I'm sorry about the other day. Were you hurt?",
+          "options": [
+            {
+              "response": "I'm fine.",
+              "with": "3",
+              "without": "1"
+            },
+            {
+              "response": "I'm not that weak.",
+              "with": "3",
+              "without": "?"
+            }
+          ]
+        },
+        {
+          "dialogue": "Yuuta: ...Sor...ry...",
+          "options": [
+            {
+              "response": "Don't sweat it."
+            },
+            {
+              "response": "I can't hear you."
+            },
+            {
+              "response": "Hitting is bad, okay?"
+            }
+          ]
+        },
+        {
+          "dialogue": "Eri: He's actually a sweet boy...",
+          "options": [
+            {
+              "response": "Yeah he is.",
+              "with": "3",
+              "without": "1"
+            },
+            {
+              "response": "You're a doting parent now.",
+              "with": "3",
+              "without": "1"
+            }
+          ]
+        },
+        {
+          "dialogue": "Eri: ...What took me so long, huh?",
+          "options": [
+            {
+              "response": "Yeah.",
+              "with": "3",
+              "without": "?"
+            },
+            {
+              "response": "It's never too late.",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 9,
+      "points": 13,
+      "choices": [
+        {
+          "dialogue": "Eri: So, today's the last day he'll be here.\nWhen Yuuta's done with school, we'll spend time together at the house.",
+          "options": [
+            {
+              "response": "It's for the best.",
+              "with": "3",
+              "without": "1"
+            },
+            {
+              "response": "I'll be lonely here.",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

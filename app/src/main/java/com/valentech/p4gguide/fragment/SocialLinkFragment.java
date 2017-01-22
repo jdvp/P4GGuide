@@ -3,11 +3,13 @@ package com.valentech.p4gguide.fragment;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.res.Resources;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.res.ResourcesCompat;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -231,7 +233,16 @@ public class SocialLinkFragment extends Fragment {
         //set location availability
         GridView locationGrid = (GridView) view.findViewById(R.id.location_grid);
         if(socialLink.getAvailability() != null && socialLink.getAvailability().getLocation() != null) {
-            locationGrid.setAdapter(new GenericGridTextAdapter(getActivity(), R.layout.generic_grid_item, getLocationItems(socialLink.getAvailability().getLocation())));
+            Location location = socialLink.getAvailability().getLocation();
+
+            //if the locations are the same just show that one location that the character is available at
+            if(location.getSundays() != null && location.getSundays().equals(location.getWeekdays())) {
+                TextView locationItem = (TextView) view.findViewById(R.id.location_grid_header);;
+                locationItem.setText(locationItem.getText() + "\n" + location.getSundays() + "\n");
+                locationGrid.setVisibility(View.GONE);
+            } else {
+                locationGrid.setAdapter(new GenericGridTextAdapter(getActivity(), R.layout.generic_grid_item, getLocationItems(location)));
+            }
         } else {
             view.findViewById(R.id.location_grid_header).setVisibility(View.GONE);
             locationGrid.setVisibility(View.GONE);
@@ -325,6 +336,10 @@ public class SocialLinkFragment extends Fragment {
             final CalendarItem item = getItem(position);
             RelativeLayout container = (RelativeLayout) convertView.findViewById(R.id.grid_item_container);
 
+            if(container != null) {
+                container.removeAllViews();
+            }
+
             if(item != null) {
                 TextView headerText = new TextView(getActivity());
                 headerText.setText(item.getDayName());
@@ -355,7 +370,7 @@ public class SocialLinkFragment extends Fragment {
 
         locationItems.add(days.get(1));
         if(location.getSundays() != null) {
-            locationItems.add(location.getWeekdays());
+            locationItems.add(location.getSundays());
         } else {
             locationItems.add(getString(R.string.not_available));
         }
@@ -380,6 +395,10 @@ public class SocialLinkFragment extends Fragment {
 
             final String item = getItem(position);
             RelativeLayout container = (RelativeLayout) convertView.findViewById(R.id.grid_item_container);
+
+            if(container != null) {
+                container.removeAllViews();
+            }
 
             if(item != null) {
                 TextView textView = new TextView(getActivity());
