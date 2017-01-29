@@ -26,7 +26,9 @@ import java.io.IOException;
  * Created by JD on 12/11/2016.
  */
 public class DayFragment extends Fragment {
+    private String date = "";
     private Boolean pageLoaded = false;
+
     @Nullable
     @Override
     public View onCreateView(final LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -43,53 +45,72 @@ public class DayFragment extends Fragment {
         //show loading animation while loading
         view.loadDataWithBaseURL("file:///android_asset/", ResourceUtility.getLoading(getActivity()), "text/html", "utf-8", null);
 
-        final String date;
         if(getArguments() != null) {
             date = getArguments().getString("date", "April_11th");
         } else {
             date = "April_11th";
         }
 
+        View.OnClickListener nextButtonClick = v -> {
+            if (!pageLoaded) {
+                return;
+            }
+
+            date = Month.getNextDay(Day.fromString(date)).toString();
+            loadPage(date, view, dayView);
+        };
         Button nextDay = (Button) dayView.findViewById(R.id.next_day_button);
         if(nextDay != null) {
-            nextDay.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!pageLoaded) {
-                        return;
-                    }
-
-                    Bundle args = new Bundle();
-                    args.putString("date", Month.getNextDay(Day.fromString(date)).toString());
-
-                    DayFragment fragment = new DayFragment();
-                    fragment.setArguments(args);
-
-                    FragmentManager fragmentManager = getFragmentManager();
-                    fragmentManager.beginTransaction().replace(R.id.content_frame, fragment, "walkthrough fragment").commit();
-                }
-            });
+            nextDay.setOnClickListener(nextButtonClick);
         }
 
+        View.OnClickListener previousButtonClick = v -> {
+            if (!pageLoaded) {
+                return;
+            }
+
+            date = Month.getPreviousDay(Day.fromString(date)).toString();
+            loadPage(date, view, dayView);
+        };
         Button previous = (Button) dayView.findViewById(R.id.previous_day_button);
         if(previous != null) {
-            previous.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (!pageLoaded) {
-                        return;
-                    }
+            previous.setOnClickListener(previousButtonClick);
+        }
 
-                    Bundle args = new Bundle();
-                    args.putString("date", Month.getPreviousDay(Day.fromString(date)).toString());
+        return loadPage(date, view, dayView);
+    }
 
-                    DayFragment fragment = new DayFragment();
-                    fragment.setArguments(args);
+    private static void largeLog(String tag, String content) {
+        if (content.length() > 4000) {
+            Log.d(tag, content.substring(0, 4000));
+            largeLog(tag, content.substring(4000));
+        } else {
+            Log.d(tag, content);
+        }
+    }
 
-                    FragmentManager fragmentManager = getFragmentManager();
-                    fragmentManager.beginTransaction().replace(R.id.content_frame, fragment, "walkthrough fragment").commit();
-                }
-            });
+    private View loadPage(String date, WebView view, View dayView) {
+        pageLoaded = false;
+        //hide or unhide the next and previous buttons if necessary
+        View previousButton = null;
+        View nextButton = null;
+        if(dayView != null && dayView.findViewById(R.id.previous_day_button) != null) {
+            previousButton = dayView.findViewById(R.id.previous_day_button);
+        }
+        if(dayView != null && dayView.findViewById(R.id.next_day_button) != null) {
+            nextButton = dayView.findViewById(R.id.next_day_button);
+        }
+
+        if( previousButton != null && new Day(Month.APRIL, 11).toString().equals(date)) {
+            previousButton.setVisibility(View.INVISIBLE);
+        } else if (previousButton != null && previousButton.getVisibility() != View.VISIBLE) {
+            previousButton.setVisibility(View.VISIBLE);
+        }
+
+        if( nextButton != null && new Day(Month.MARCH, 20).toString().equals(date)) {
+            nextButton.setVisibility(View.INVISIBLE);
+        } else if (nextButton != null && nextButton.getVisibility() != View.VISIBLE) {
+            nextButton.setVisibility(View.VISIBLE);
         }
 
         //if we have a local version of the page, show it
@@ -107,17 +128,8 @@ public class DayFragment extends Fragment {
 
         //otherwise retrieve from the internet and then add to cache
         Runnable loadPage = new LoadWalkthroughPageRunnable(getActivity(), date, view);
-        new AbstractAsyncTask().run(loadPage).execute();
+        new AbstractAsyncTask().run(loadPage).andThen(() -> {pageLoaded = true;}).execute();
         return dayView;
-    }
-
-    private static void largeLog(String tag, String content) {
-        if (content.length() > 4000) {
-            Log.d(tag, content.substring(0, 4000));
-            largeLog(tag, content.substring(4000));
-        } else {
-            Log.d(tag, content);
-        }
     }
 }
 

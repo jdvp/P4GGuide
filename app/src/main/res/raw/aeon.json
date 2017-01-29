@@ -1,0 +1,418 @@
+{
+  "title": "Aeon Arcana : Marie",
+  "availability": {
+    "monday": false,
+    "tuesday": false,
+    "wednesday": true,
+    "thursday": false,
+    "friday": false,
+    "saturday": true,
+    "sunday": true,
+    "rain": false,
+    "activation": "Starting on April 18th, vist the Velvet Room. If event does not trigger, try re-entering the Velvet Room.\n\nSocial link rank 4 can only be started on July 24th or later.",
+    "last": "November 27th",
+    "location": {
+      "weekdays": "Outside the Velvet Room in Shopping District, South",
+      "sundays": "Outside the Velvet Room in Shopping District, South"
+    }
+  },
+  "notes" : "You must max Marie's social link in order to access the new bonus dungeon that is available in February.\n\nMax Social Link Item is the Bamboo Comb which will allow you to fuse Kaguya.",
+  "rank": [{
+      "level": 0,
+      "points": 0,
+      "special": "All dialogue choices have the same effect."
+    },
+    {
+      "level": 1,
+      "points": 0,
+      "special" : "All dialogue choices have the same effect."
+    },
+    {
+      "level": 2,
+      "points": 0,
+      "choices": [
+        {
+          "dialogue": "Marie: Hey, what do you do in the city?",
+          "options": [
+            {
+              "response": "Play around.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "Peoplewatch.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "There's nothing to do.",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        },
+        {
+          "dialogue": "Yukiko: Chie, they might already have plans of thier own. Don't just assume they can come along at a moment's notice.",
+          "options": [
+            {
+              "response": "I don't mind."
+            },
+            {
+              "response": "If you want to."
+            }
+          ]
+        },
+        {
+          "dialogue": "Chie is holding a green shirt...",
+          "options": [
+            {
+              "response": "I don't know."
+            },
+            {
+              "response": "I think it's good."
+            },
+            {
+              "response": "That's green, you know."
+            }
+          ]
+        },
+        {
+          "dialogue": "Yukiko has a crimson skirt in her hands...",
+          "options": [
+            {
+              "response": "I don't know."
+            },
+            {
+              "response": "I think it's good."
+            },
+            {
+              "response": "That's an eye-catching color."
+            }
+          ]
+        },
+        {
+          "dialogue": "Chie: Why don't we all go together, then?\nThe four of us!",
+          "options": [
+            {
+              "response": "Of course."
+            },
+            {
+              "response": "If you want to."
+            }
+          ]
+        },
+        {
+          "dialogue": "Chie: Well... I don't really know.\nThe meaning of friendship...?\nHmmm...",
+          "options": [
+            {
+              "response": "There's meaning."
+            },
+            {
+              "response": "You'll know once you have one."
+            }
+          ]
+        },
+         {
+          "dialogue": "Marie: Huh? Me too?",
+          "options": [
+            {
+              "response": "Let's hurry.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "You're not going?",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "It'll sell out."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "points": 0,
+      "choices": [
+        {
+          "dialogue": "Marie: You don't get tired of it?",
+          "options": [
+            {
+              "response": "It's fun.",
+              "with": "3",
+              "without": "2"
+            },{
+              "response": "It's pretty much my duty.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "I skip it sometimes."
+            }
+          ]
+        },
+        {
+          "dialogue": "Yosuke: What are you guys doing? Out on a stroll?",
+          "options": [
+            {
+              "response": "I'm showing her the school."
+            },
+            {
+              "response": "Come with us."
+            }
+          ]
+        },
+        {
+          "dialogue": "Marie: ...I don't get it. Do Green and Red do that, too?",
+          "options": [
+            {
+              "response": "Of course."
+            },
+            {
+              "response": "You spend youth with everyone."
+            }
+          ]
+        },{
+          "dialogue": "Marie: Face yourself...",
+          "options": [
+            {
+              "response": "Let it go."
+            },
+            {
+              "response": "Let's spend our youths."
+            },
+            {
+              "response": "Wondering about your 'true self'?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "points": 0,
+      "special" : "Cannot start this link or any after until Rise is in your party (AKA July 24th onwards).\n\nAll dialogue choices have the same effect."
+    },
+    {
+      "level": 5,
+      "points": 0,
+      "choices": [
+        {
+          "dialogue": "Marie: So, about my memories...\nWhat do you think I should do?",
+          "options": [
+            {
+              "response": "Are there any clues?"
+            },
+            {
+              "response": "I don't know."
+            },
+            {
+              "response": "First, meditate."
+            }
+          ]
+        },
+        {
+          "dialogue": "Marie: ...Will this help?",
+          "options": [
+            {
+              "response": "It's made of bamboo.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Is it sold somewhere?",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        },
+        {
+          "dialogue": "What store around here might deal in old combs like that...?",
+          "options": [
+            {
+              "response": "Tatsumi Textiles"
+            },
+            {
+              "response": "Marukyu Tofu"
+            },
+            {
+              "response": "Junes"
+            }
+          ]
+        },
+        {
+          "dialogue": "Rise: Huh? Wait... Don't tell me the two of you are on a date...",
+          "options": [
+            {
+              "response": "It's not like that."
+            },
+            {
+              "response": "We have business here."
+            },
+            {
+              "response": "Of course it's a date."
+            }
+          ]
+        },
+        {
+          "dialogue": "Kanji: So, what do you want from me? You need me to figure out where this thing came from?",
+          "options": [
+            {
+              "response": "Can you?"
+            },
+            {
+              "response": "Anything will help."
+            }
+          ]
+        },
+        {
+          "dialogue": "Marie grimaces...",
+          "options": [
+            {
+              "response": "Do you remember something?"
+            },
+            {
+              "response": "Does your stomach hurt?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "points": 0,
+      "special": "All dialogue choices have the same effect."
+    },
+    {
+      "level": 7,
+      "points": 0,
+      "special": "All dialogue choices have the same effect."
+    },
+    {
+      "level": 8,
+      "points": 0,
+      "choices": [
+        {
+          "dialogue": "Marie: I had fun then. Take me there again sometimes, okay?",
+          "options": [
+            {
+              "response": "You remember."
+            },
+            {
+              "response": "I thought you forgot."
+            },
+            {
+              "response": "That's a 'memory'."
+            }
+          ]
+        },
+        {
+          "dialogue": "Marie: Hey, can we make more?\nMore memories...",
+          "options": [
+            {
+              "response": "I'll help.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "It's up to you.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Don't forget 'em.",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        },
+        {
+          "dialogue": "Marie: ...Why?",
+          "special": "Options denoted with L lead to one more question that leads to the Lover's route.",
+          "options": [
+            {
+              "response": "Because I love you.",
+              "with": "L",
+              "without": "L"
+            },
+            {
+              "response": "Because you're my friend."
+            }
+          ]
+        },
+        {
+          "dialogue": "Marie: ...I won't beleive just words.",
+          "special" : "This line only shows if you pick the first choice on the last question.\nOptions denoted with L lead to the Lover's route",
+          "options": [
+            {
+              "response": "Hug her.",
+              "with": "L",
+              "without": "L"
+            },
+            {
+              "response": "Don't hug her."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 9,
+      "points": 0,
+      "choices": [
+        {
+          "dialogue": "Marie is looking around your room...",
+          "lovers": true,
+          "options": [
+            {
+              "response": "What's wrong?",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Bored?",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Don't snoop around.",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        },
+        {
+          "dialogue": "Marie: Memories so fun, I won't care about the past anymore.",
+          "lovers": true,
+          "options": [
+            {
+              "response": "Leave it to me.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Lots of memories won't do it.",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        },
+        {
+          "dialogue": "Marie: ...I wouldn't have been able to do that on my own. I only realized that because of you.",
+          "options": [
+            {
+              "response": "I'm not hearing a \"Thank You\"."
+            },
+            {
+              "response": "It was fun.",
+              "with": "3",
+              "without": "3"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
