@@ -1,0 +1,2 @@
+# P4GGuide
+This is an app that is meant to be a guide for the video game "Persona 4 Golden". Originally, the code was private but really it has just turned into a bunch of JSON and HTML now so I'm pretty bored with the whole project and might never finish. I don't know if I will get around to actually finishing all of the content for the app since I like coding WAY more than I like walkthroughs. Anyway, feel free to use any of the JSON or wahtever in this project.
