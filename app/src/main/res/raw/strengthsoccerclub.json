@@ -1,0 +1,271 @@
+{
+  "title": "Strength Arcana: Fellow Athletes, Soccer Club",
+  "availability": {
+    "monday": true,
+    "tuesday": true,
+    "wednesday": true,
+    "thursday": false,
+    "friday": false,
+    "saturday": true,
+    "sunday": true,
+    "rain": false,
+    "activation": "Starting on April 19, visit the faculty room to talk to Morooka about clubs. Then, find the Sports cllub by the west exit of the School Building 1F. You will then have the option to join either the Basketball Club (Kou) or the Soccer Club (Daisuke).",
+    "last": "November 27th",
+    "location": {
+      "weekdays": "School Building 1F, Right Side",
+      "sundays": "Shopping District, North"
+    }
+  },
+  "notes" : "It is recommended to take the Basketball Club over the Soccer club if you're going for a Max Social Link achievement, because the Basketball Club's Social Link takes fewer days to rank up. Although the chart shows that Soccer Club requires less points to rank up, there are fewer responses that give rank-up points in the Soccer Club so it end up taking more days.\n\nHowever, if you are trying to obtain all the books you have to be careful with the Basketball Clubas there are more restrictions. Therefore soccer is preferred in that case.\n\nMax Social Link Item is the Spike Brush which allows you to fuse Zaou-Gongen.",
+  "rank": [
+    {
+      "level": 1,
+      "points": 0,
+      "choices": [
+        {
+          "dialogue": "Soccer Player: Hey, [Main Character]. Tear down the goals and clean up before you leave, alright?",
+          "options": [
+            {
+              "response": "Got it (Understanding UP)"
+            },
+            {
+              "response": "Why should I?"
+            }
+          ]
+        },
+        {
+          "dialogue": "Daisuke: Still, it went pretty fast with three people.",
+          "options": [
+            {
+              "response": "Thanks for the help.",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "I didn't ask you to do it."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "points": 4,
+      "special": "Ranking is automatic."
+    },
+    {
+      "level": 3,
+      "points": 2,
+      "choices": [
+        {
+          "dialogue": "Daisuke: Whatever... Girls are a pain in the ass, right, [Main Character]?",
+          "options": [
+            {
+              "response": "Right on.",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "That's not true..."
+            },
+            {
+              "response": "Quit showing offf."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "points": 3,
+      "choices": [
+        {
+          "dialogue": "Kou is also beaming like it's all thanks to him...",
+          "options": [
+            {
+              "response": "Thanks, guys...",
+              "with": "2",
+              "without": "2"
+            },
+            {
+              "response": "I'm just getting warmed up.",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 5,
+      "points": 2,
+      "choices": [
+        {
+          "dialogue": "Kou: I have to do some family stuff today, though. Would next time be okay?",
+          "options": [
+            {
+              "response": "No problem.",
+              "with": "2",
+              "without": "1"
+            },
+            {
+              "response": "Anything for you guys. (Requires LV4 Understanding)",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "Long as it's not a hassle..."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 6,
+      "points": 4,
+      "choices": [
+        {
+          "dialogue": "Daisuke: I have to do the class record today, so don't wait up for me.",
+          "options": [
+            {
+              "response": "If you say so."
+            },
+            {
+              "response": "It's okay, I'll wait."
+            }
+          ]
+        },
+        {
+          "dialogue": "Kou: Tell you what, we'll talk over mapo rice.\nMy treat!",
+          "options": [
+            {
+              "response": "Sounds good.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "You treated last time."
+            }
+          ]
+        },
+        {
+          "dialogue": "Kou: You think it could be related...?",
+          "options": [
+            {
+              "response": "Could be...",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "Maybe not..."
+            },
+            {
+              "response": "What are we talking about?"
+            }
+          ]
+        },
+        {
+          "dialogue": "Kou: What do you think?",
+          "options": [
+            {
+              "response": "We've got a problem.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "It's Daisuke's problem."
+            }
+          ]
+        },
+        {
+          "dialogue": "Kou is looking at you expectantly...",
+          "options": [
+            {
+              "response": "Count me in.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "Count me out."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 7,
+      "points": 0,
+      "choices": [
+        {
+          "dialogue": "Their quarrel starts to escalate...",
+          "options": [
+            {
+              "response": "Stop them",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "Stay quiet and watch"
+            },
+            {
+              "response": "Provoke them"
+            }
+          ]
+        },
+        {
+          "dialogue": "Daisuke: You got that!? It's MY life! you guys have nothing to do with it.",
+          "options": [
+            {
+              "response": "Yes we do!"
+            },
+            {
+              "response": "......"
+            }
+          ]
+        },
+        {
+          "dialogue": "Kou: You can be pretty sincere when you want to, Daisuke.",
+          "options": [
+            {
+              "response": "That's his charm.",
+              "with": "3",
+              "without": "3"
+            },
+            {
+              "response": "You think?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 8,
+      "points": 6,
+      "choices": [
+        {
+          "dialogue": "Daisuke: I wonder if she's as stuck in the past as I am...",
+          "options": [
+            {
+              "response": "Could be.",
+              "with": "3",
+              "without": "2"
+            },
+            {
+              "response": "Doubt it."
+            },
+            {
+              "response": "I don't know.",
+              "with": "3",
+              "without": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": 9,
+      "points": 6,
+      "special": "No options are available during this rank-up."
+    }
+  ]
+}
